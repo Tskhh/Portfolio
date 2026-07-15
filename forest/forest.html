@@ -11,7 +11,8 @@
 	<script src="../js/project-lite.js"></script>
 	<script>
 	(function () {
-		const mobile = window.matchMedia('(max-width: 768px)').matches
+		const mobile = window.matchMedia('(max-width: 1024px)').matches ||
+			window.matchMedia('(hover: none) and (pointer: coarse)').matches
 		const files = mobile
 			? ['app.js']
 			: ['gsap/gsap.min.js', 'gsap/ScrollTrigger.min.js', 'gsap/ScrollSmoother.min.js', 'app.js']

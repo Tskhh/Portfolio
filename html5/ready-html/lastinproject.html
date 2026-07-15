@@ -10,9 +10,22 @@
 	<link rel="stylesheet" href="../../css/project-back.css">
 	<link rel="stylesheet" href="../../css/project-lite.css">
 	<script src="../../js/project-lite.js"></script>
-	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
-	<script src="libs/swiper/bindSwipers.js" defer></script>
-	<script src="js/app.js" defer></script>
+	<script>
+	(function () {
+		const mobile = window.matchMedia('(max-width: 1024px)').matches ||
+			window.matchMedia('(hover: none) and (pointer: coarse)').matches
+		if (!mobile) {
+			['libs/swiper/swiper-bundle.min.js', 'libs/swiper/bindSwipers.js', 'js/app.js'].forEach((src) => {
+				const s = document.createElement('script')
+				s.src = src
+				s.defer = true
+				document.head.appendChild(s)
+			})
+		} else {
+			document.documentElement.classList.add('is-mobile-swiper')
+		}
+	})()
+	</script>
 </head>
 <body>
 

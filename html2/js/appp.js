@@ -1,6 +1,14 @@
-const isMobile = window.matchMedia('(max-width: 768px)').matches
+const isMobile = window.matchMedia('(max-width: 1024px)').matches ||
+	window.matchMedia('(hover: none) and (pointer: coarse)').matches
 
 if (!isMobile) {
+	document.querySelectorAll('video[data-src]').forEach((video) => {
+		video.src = video.dataset.src
+		video.autoplay = true
+		video.loop = true
+		video.play().catch(() => {})
+	})
+
 	let zSpacing = -1000
 	let lastPos = zSpacing / 5
 	const frames = Array.from(document.getElementsByClassName('frame'))

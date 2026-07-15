@@ -11,7 +11,8 @@
 .lite-mode .gallery,
 .lite-mode .gallery_item,
 .lite-mode .magic-list_item,
-.lite-mode .slider_item {
+.lite-mode .slider_item,
+.lite-mode .item {
 	will-change: auto !important;
 }
 
@@ -19,8 +20,15 @@
 	transition: none !important;
 }
 
+.lite-mode .layers_middle,
+.lite-mode .layers_front {
+	display: none !important;
+}
+
 .lite-mode video,
-.lite-mode .soundbutton {
+.lite-mode .soundbutton,
+.lite-mode .cursor,
+.lite-mode .item-bg {
 	display: none !important;
 }
 
@@ -40,14 +48,43 @@
 .lite-mode .gallery {
 	transform: none !important;
 	opacity: 1 !important;
+	position: static !important;
+	height: auto !important;
+}
+
+.lite-mode .gallery_item:hover {
+	transform: none !important;
 }
 
 .lite-mode .features {
 	background-attachment: scroll !important;
 }
 
-@media (max-width: 768px) {
+.lite-mode .container,
+.lite-mode .gallery,
+.lite-mode section,
+.lite-mode .frame {
+	perspective: none !important;
+	transform-style: flat !important;
+	filter: none !important;
+	backdrop-filter: none !important;
+}
+
+.lite-mode body,
+.lite-mode {
+	font-family: system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+}
+
+@media (max-width: 1024px) {
 	img {
 		content-visibility: auto;
+	}
+
+	section,
+	.frame,
+	.gallery_item,
+	.magic-list_item {
+		content-visibility: auto;
+		contain-intrinsic-size: auto 300px;
 	}
 }
