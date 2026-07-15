@@ -25,38 +25,6 @@ function initSwiper() {
 	})
 }
 
-function initDesktopVideo(swiper) {
-	const video = document.querySelector('.video-background')
-	if (!video || !swiper) return
-
-	const src = video.dataset.src
-	if (!src) return
-
-	video.src = src
-	video.preload = 'metadata'
-
-	video.addEventListener('loadedmetadata', () => {
-		video.currentTime = 0
-	}, { once: true })
-
-	swiper.on('slideChange', function () {
-		if (!video.duration || Number.isNaN(video.duration) || typeof gsap === 'undefined') return
-
-		const maxIndex = Math.max(this.slides.length - 1, 1)
-		gsap.to(video, {
-			duration: 0.9,
-			currentTime: (video.duration / maxIndex) * this.realIndex,
-			ease: 'power2.out'
-		})
-	})
-
-	swiper.on('slideChangeTransitionStart', () => {
-		video.classList.add('change')
-	}).on('slideChangeTransitionEnd', () => {
-		video.classList.remove('change')
-	})
-}
-
 function bootHero() {
 	document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop')
 
@@ -65,17 +33,6 @@ function bootHero() {
 	if (isMobile && swiper) {
 		window.addEventListener('load', () => swiper.update(), { once: true })
 	}
-
-	if (isMobile) {
-		const video = document.querySelector('.video-background')
-		if (video) video.remove()
-		return
-	}
-
-	const gsapScript = document.createElement('script')
-	gsapScript.src = 'libs/gsap/gsap.min.js'
-	gsapScript.onload = () => initDesktopVideo(swiper)
-	document.head.appendChild(gsapScript)
 }
 
 if (document.readyState === 'loading') {

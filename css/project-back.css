@@ -10,22 +10,22 @@
 	font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
 	font-size: 14px;
 	font-weight: 500;
-	color: #fff;
+	color: #F1EADA;
 	text-decoration: none;
-	background: rgba(10 10 10 / .75);
-	border: 1px solid rgba(255 255 255 / .15);
+	background: rgba(88 71 56 / .85);
+	border: 1px solid rgba(241 234 218 / .2);
 	border-radius: 8px;
 	backdrop-filter: blur(8px);
 	transition: background .2s ease, border-color .2s ease, transform .15s ease;
 }
 
 .project-back:hover {
-	background: rgba(250 144 33 / .9);
-	border-color: rgba(250 144 33 / .5);
+	background: #777672;
+	border-color: rgba(241 234 218 / .35);
 }
 
 .project-back:focus-visible {
-	outline: 2px solid #FA9021;
+	outline: 2px solid #F1EADA;
 	outline-offset: 2px;
 }
 
