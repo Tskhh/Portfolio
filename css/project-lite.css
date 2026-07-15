@@ -1,0 +1,53 @@
+.lite-mode *,
+.lite-mode *::before,
+.lite-mode *::after {
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0.01ms !important;
+}
+
+.lite-mode .layer,
+.lite-mode .frame,
+.lite-mode .gallery,
+.lite-mode .gallery_item,
+.lite-mode .magic-list_item,
+.lite-mode .slider_item {
+	will-change: auto !important;
+}
+
+.lite-mode .layer {
+	transition: none !important;
+}
+
+.lite-mode video,
+.lite-mode .soundbutton {
+	display: none !important;
+}
+
+.lite-mode .main-wrapper .slider:nth-child(n+2) {
+	display: none !important;
+}
+
+.lite-mode .layers_base,
+.lite-mode .layers_middle,
+.lite-mode .layers_front,
+.lite-mode .layer_header,
+.lite-mode .main-article_header,
+.lite-mode .main-article_paragraph {
+	transform: none !important;
+}
+
+.lite-mode .gallery {
+	transform: none !important;
+	opacity: 1 !important;
+}
+
+.lite-mode .features {
+	background-attachment: scroll !important;
+}
+
+@media (max-width: 768px) {
+	img {
+		content-visibility: auto;
+	}
+}

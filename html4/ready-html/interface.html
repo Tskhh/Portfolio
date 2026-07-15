@@ -8,14 +8,27 @@
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="../../css/project-back.css">
-	<script src="libs/gsap.min.js" defer></script>
-	<script src="libs/Draggable.min.js" defer></script>
-	<script src="libs/InertiaPlugin.min.js" defer></script>
-	<script src="js/app.js" defer></script>
-	<style>
-		.gallery {
-			opacity: 0;
+	<link rel="stylesheet" href="../../css/project-lite.css">
+	<script src="../../js/project-lite.js"></script>
+	<script>
+	(function () {
+		const mobile = window.matchMedia('(max-width: 991px)').matches
+		if (!mobile) {
+			['libs/gsap.min.js', 'libs/Draggable.min.js', 'libs/InertiaPlugin.min.js'].forEach((src) => {
+				const s = document.createElement('script')
+				s.src = src
+				s.defer = true
+				document.head.appendChild(s)
+			})
 		}
+		const app = document.createElement('script')
+		app.src = 'js/app.js'
+		app.defer = true
+		document.head.appendChild(app)
+	})()
+	</script>
+	<style>
+		.gallery { opacity: 0; }
 	</style>
 </head>
 <body>

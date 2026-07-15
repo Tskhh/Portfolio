@@ -3,14 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Parallax Forest — учебный проект с многослойным parallax-эффектом при скролле.">
+	<meta name="description" content="Parallax Forest — учебный проект с многослойным parallax-эффектом.">
 	<title>Parallax Forest — учебный проект</title>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="../css/project-back.css">
-	<script src="gsap/gsap.min.js" defer></script>
-	<script src="gsap/ScrollTrigger.min.js" defer></script>
-	<script src="gsap/ScrollSmoother.min.js" defer></script>
-	<script src="app.js" defer></script>
+	<link rel="stylesheet" href="../css/project-lite.css">
+	<script src="../js/project-lite.js"></script>
+	<script>
+	(function () {
+		const mobile = window.matchMedia('(max-width: 768px)').matches
+		const files = mobile
+			? ['app.js']
+			: ['gsap/gsap.min.js', 'gsap/ScrollTrigger.min.js', 'gsap/ScrollSmoother.min.js', 'app.js']
+		files.forEach((src) => {
+			const s = document.createElement('script')
+			s.src = src
+			s.defer = true
+			document.head.appendChild(s)
+		})
+	})()
+	</script>
 </head>
 <body>
 
@@ -33,7 +45,7 @@
 			<article class="main-article" style="background-image: url(img_2/dungeon.jpg);">
 				<div class="main-article_content">
 					<h2 class="main-article_header">Parallax при скролле</h2>
-					<p class="main-article_paragraph">Учебный проект, демонстрирующий многослойный parallax-эффект с GSAP ScrollTrigger и ScrollSmoother. Каждый слой движется с разной скоростью, создавая ощущение глубины и погружения в атмосферу леса.</p>
+					<p class="main-article_paragraph">Учебный проект с многослойным parallax-эффектом. На десктопе — GSAP ScrollSmoother, на мобильных — облегчённая CSS-версия.</p>
 				</div>
 				<div class="copy">© 2026 Егор Толстых · Учебный проект</div>
 			</article>

@@ -5,11 +5,10 @@ function initSwiper() {
 	if (!sliderEl || typeof Swiper === 'undefined') return null
 
 	return new Swiper('.swiper', {
-		speed: isMobile ? 350 : 900,
+		speed: isMobile ? 300 : 900,
 		autoHeight: isMobile,
 		mousewheel: !isMobile,
 		allowTouchMove: true,
-		simulateTouch: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true
@@ -27,9 +26,7 @@ function initSwiper() {
 
 function bootHero() {
 	document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop')
-
 	const swiper = initSwiper()
-
 	if (isMobile && swiper) {
 		window.addEventListener('load', () => swiper.update(), { once: true })
 	}
