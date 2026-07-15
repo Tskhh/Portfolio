@@ -11,6 +11,18 @@ Frontend-портфолио на чистом HTML, CSS и JavaScript.
 - **Навыки** — `skills.html`
 - **Контакты** — `contact.html`
 
+## Проекты
+
+| Папка | Описание |
+|-------|----------|
+| `parallax-forest/` | Parallax Forest — многослойный scroll-эффект |
+| `gamedev-landing/` | GameDev Landing — многостраничный лендинг |
+| `3d-scroll-gallery/` | 3D Scroll Gallery — галерея с 3D-трансформациями |
+| `hover-gallery/` | Hover Gallery — интерактивная фотогалерея |
+| `draggable-gallery/` | Draggable Gallery — drag-and-drop на GSAP |
+| `swiper-portfolio/` | Swiper Portfolio — синхронизированные карусели |
+| `magic-list-parallax/` | Magic List Parallax — список с parallax-курсором |
+
 ## Локальный запуск
 
 ```bash

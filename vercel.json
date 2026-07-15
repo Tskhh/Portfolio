@@ -4,7 +4,72 @@
   "redirects": [
     {
       "source": "/html",
-      "destination": "/html/",
+      "destination": "/gamedev-landing",
+      "permanent": true
+    },
+    {
+      "source": "/html/:path*",
+      "destination": "/gamedev-landing/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/forest/forest.html",
+      "destination": "/parallax-forest",
+      "permanent": true
+    },
+    {
+      "source": "/forest/:path*",
+      "destination": "/parallax-forest/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/html2/index3d.html",
+      "destination": "/3d-scroll-gallery",
+      "permanent": true
+    },
+    {
+      "source": "/html2/:path*",
+      "destination": "/3d-scroll-gallery/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/html3/scroller.html",
+      "destination": "/hover-gallery",
+      "permanent": true
+    },
+    {
+      "source": "/html3/:path*",
+      "destination": "/hover-gallery/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/html4/ready-html/interface.html",
+      "destination": "/draggable-gallery",
+      "permanent": true
+    },
+    {
+      "source": "/html4/:path*",
+      "destination": "/draggable-gallery/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/html5/ready-html/lastinproject.html",
+      "destination": "/swiper-portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/html5/:path*",
+      "destination": "/swiper-portfolio/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/HTMLLL7/html/parallax2.html",
+      "destination": "/magic-list-parallax",
+      "permanent": true
+    },
+    {
+      "source": "/HTMLLL7/:path*",
+      "destination": "/magic-list-parallax/:path*",
       "permanent": true
     },
     {

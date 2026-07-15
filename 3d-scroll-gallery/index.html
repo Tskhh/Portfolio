@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="3D Scroll Gallery — галерея с 3D-трансформациями при прокрутке.">
+	<title>3D Scroll Gallery — учебный проект</title>
+	<base href="/3d-scroll-gallery/">
+	<link rel="stylesheet" href="/3d-scroll-gallery/css/main.css">
+	<link rel="stylesheet" href="/css/project-back.css">
+	<link rel="stylesheet" href="/css/project-lite.css">
+	<script src="/js/project-lite.js"></script>
+	<script src="/3d-scroll-gallery/js/app.js" defer></script>
+</head>
+<body>
+
+	<a href="/portfolio.html" class="project-back">К портфолио</a>
+
+	<div class="container">
+		<section class="gallery">
+
+			<div class="frame">
+				<div class="frame_content">
+					<h2>Красивый мир</h2>
+				</div>
+			</div>
+
+			<div class="frame">
+				<div class="frame_content">
+					<div class="frame-media frame-media_left" style="background-image: url(images/1.jpg);"></div>
+				</div>
+			</div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<video class="frame-media frame-media_right" data-src="media/video_optimized.mp4" muted playsinline loop preload="none"></video>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame">
+				<div class="frame_content text-right">
+					<h3>Чистая планета</h3>
+					<p>Галерея с 3D-трансформациями при прокрутке — CSS perspective и scroll-based анимации на JavaScript.</p>
+				</div>
+			</div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<div class="frame-media frame-media_left" style="background-image: url(images/2.jpg);"></div>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<div class="frame-media frame-media_right" style="background-image: url(images/3.jpg);"></div>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame">
+				<div class="frame_content text-left">
+					<h3>Горы зовут</h3>
+					<p>Каждый кадр появляется с эффектом глубины.<br>Учебный проект для отработки 3D-scroll и работы с медиа.</p>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<div class="frame-media frame-media_right" style="background-image: url(images/4.jpg);"></div>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<video class="frame-media frame-media_left" data-src="media/video_optimized.mp4" muted playsinline loop preload="none"></video>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<div class="frame-media frame-media_right" style="background-image: url(images/5.jpg);"></div>
+				</div>
+			</div>
+
+			<div class="frame frame_bg">
+				<div class="frame_content">
+					<video class="frame-media" data-src="media/video_optimized.mp4" muted playsinline loop preload="none"></video>
+				</div>
+			</div>
+
+			<div class="frame">
+				<div class="frame_content">© Егор Толстых · 3D Scroll Gallery</div>
+			</div>
+
+		</section>
+	</div>
+
+	<button type="button" class="soundbutton paused" aria-label="Включить или выключить звук">
+		<img src="images/sound.gif" alt="" aria-hidden="true">
+	</button>
+	<audio class="audio" src="media/ambient.mp3" loop preload="none"></audio>
+
+</body>
+</html>
