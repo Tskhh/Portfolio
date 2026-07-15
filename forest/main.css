@@ -166,3 +166,58 @@ border-bottom: 5px solid #DC7000;
     position: relative;
     display: inline-block;
 }
+
+@media (max-width: 768px) {
+	.layers {
+		height: 65vh;
+		min-height: 360px;
+	}
+
+	.layers_title {
+		font-size: clamp(1.6rem, 8vw, 2.4rem);
+		letter-spacing: 0.06em;
+	}
+
+	.layers_caption {
+		font-size: clamp(0.75rem, 3.5vw, 1rem);
+		letter-spacing: 0.12em;
+		margin-top: 8px;
+	}
+
+	.main-article {
+		min-height: auto;
+		padding: 48px 16px 80px;
+	}
+
+	.main-article_header {
+		font-size: clamp(1.25rem, 6vw, 1.75rem);
+		letter-spacing: 0.05em;
+	}
+
+	.main-article_paragraph {
+		max-width: 100%;
+		min-width: 0;
+		font-size: 15px;
+		padding: 0 8px;
+		line-height: 1.6;
+	}
+
+	.main-article_content {
+		padding: 0 12px;
+	}
+
+	.copy {
+		position: static;
+		margin-top: 32px;
+		opacity: 0.6;
+		font-size: 13px;
+	}
+
+	.layer {
+		transition: none;
+	}
+
+	.layer_header {
+		transition: none;
+	}
+}

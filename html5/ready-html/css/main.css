@@ -15,7 +15,7 @@ html, body {
 	height: 100%;
 	display: flex;
 	gap: var(--index);
-	background-image:  url(/html5/ready-html/img/bg.jpg);
+	background-image: url(../img/bg.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -50,4 +50,49 @@ html, body {
 }
 .slider:nth-child(odd) .slider_img {
 	transform: rotate(-180deg);
+}
+
+@media (max-width: 768px) {
+	html,
+	body {
+		height: auto;
+		overflow: auto;
+	}
+
+	.main-wrapper {
+		flex-direction: column;
+		height: auto;
+		min-height: 100vh;
+		padding: 72px 16px 32px;
+		gap: 28px;
+		background-attachment: scroll;
+	}
+
+	.slider {
+		transform: none !important;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.slider:nth-child(odd) {
+		transform: none !important;
+	}
+
+	.slider_item {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+
+	.slider:nth-child(odd) .slider_img {
+		transform: none;
+	}
+
+	.slider_item:hover {
+		transform: none;
+	}
+
+	.slider_img {
+		min-height: 200px;
+		aspect-ratio: 16 / 10;
+	}
 }

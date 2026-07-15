@@ -133,3 +133,46 @@ body {
 .magic-list_item:hover .item-bg {
 	opacity: .1;
 }
+
+@media (max-width: 768px) {
+	body {
+		cursor: auto;
+	}
+
+	.magic-list {
+		font-size: clamp(1.5rem, 7vw, 2rem);
+		padding: 72px 16px 24px;
+	}
+
+	.magic-list_item {
+		padding: 24px 16px 24px 40px;
+		cursor: pointer;
+		line-height: 1.2;
+	}
+
+	.magic-list_item::before {
+		position: absolute;
+		left: 8px;
+		margin-left: 0;
+		margin-top: 4px;
+		font-size: 12px;
+	}
+
+	.magic-list_item:hover .magic-list_header,
+	.magic-list_item:hover::before {
+		transform: none;
+	}
+
+	.cursor {
+		display: none;
+	}
+
+	.magic-list_item.is-active .item-bg,
+	.magic-list_item:hover .item-bg {
+		opacity: 0.15;
+	}
+
+	.magic-list_item.is-active {
+		background-color: light-dark(var(--dark-hover), var(--light-hover));
+	}
+}

@@ -652,6 +652,21 @@ footer .blocks ul li {
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: 24px 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    header nav ul li.btn a {
+        display: inline-block;
+        margin-top: 8px;
+    }
+
     .trending .games .block {
         width: 100%;
     }

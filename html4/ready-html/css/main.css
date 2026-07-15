@@ -73,3 +73,43 @@ body {
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	body {
+		overflow: auto;
+		height: auto;
+		min-height: 100vh;
+		flex-direction: column;
+		padding: 72px 16px 32px;
+		align-items: stretch;
+	}
+
+	.header {
+		position: static;
+		font-size: clamp(1.25rem, 5vw, 1.75rem);
+		margin-bottom: 20px;
+	}
+
+	.header span {
+		font-size: 14px;
+		margin-top: 8px;
+	}
+
+	.gallery {
+		width: 100%;
+		max-width: 100%;
+		column-count: 2;
+		column-width: auto;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+
+	.gallery_item {
+		break-inside: avoid;
+		margin-bottom: 8px;
+	}
+
+	.gallery_item:hover {
+		transform: none;
+	}
+}
