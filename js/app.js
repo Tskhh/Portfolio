@@ -6,6 +6,7 @@ function initSwiper() {
 
 	return new Swiper('.swiper', {
 		speed: isMobile ? 350 : 900,
+		autoHeight: isMobile,
 		mousewheel: !isMobile,
 		allowTouchMove: true,
 		simulateTouch: true,
@@ -13,7 +14,7 @@ function initSwiper() {
 			el: '.swiper-pagination',
 			clickable: true
 		},
-		navigation: {
+		navigation: isMobile ? undefined : {
 			prevEl: '.swiper-button-prev',
 			nextEl: '.swiper-button-next'
 		},
@@ -60,6 +61,10 @@ function bootHero() {
 	document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop')
 
 	const swiper = initSwiper()
+
+	if (isMobile && swiper) {
+		window.addEventListener('load', () => swiper.update(), { once: true })
+	}
 
 	if (isMobile) {
 		const video = document.querySelector('.video-background')
