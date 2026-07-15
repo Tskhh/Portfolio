@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npm --prefix github-dashboard-src ci && npm --prefix github-dashboard-src run build",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
