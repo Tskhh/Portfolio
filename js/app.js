@@ -1,4 +1,4 @@
-const isMobile = window.matchMedia('(max-width: 768px), (pointer: coarse)').matches
+const isMobile = window.matchMedia('(max-width: 768px)').matches
 
 function initSwiper() {
 	const sliderEl = document.querySelector('.swiper')

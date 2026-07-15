@@ -321,6 +321,32 @@ body .top-line ul li.active::after {
 	gap: 10px;
 }
 
+@media (min-width: 769px) {
+	.slider-navigation {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+		justify-content: space-between;
+		padding: 0 clamp(20px, 4vw, 48px);
+		pointer-events: none;
+		z-index: 11;
+	}
+
+	.slider-navigation > * {
+		pointer-events: auto;
+	}
+
+	.slider-bottom {
+		justify-content: center;
+	}
+
+	.slider-pagination {
+		flex: none;
+	}
+}
+
 .slider-navigation > * {
 	border: 1.5px solid rgba(241 234 218 / .35);
 	border-radius: 10em;
