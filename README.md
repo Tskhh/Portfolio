@@ -16,6 +16,8 @@ Frontend-портфолио на чистом HTML, CSS и JavaScript.
 | Папка | Описание |
 |-------|----------|
 | `parallax-forest/` | Parallax Forest — многослойный scroll-эффект |
+| `github-dashboard/` | GitHub Dashboard — React + GitHub REST API |
+| `json-formatter/` | JSON Formatter — утилита на Vanilla JS |
 | `gamedev-landing/` | GameDev Landing — многостраничный лендинг |
 | `3d-scroll-gallery/` | 3D Scroll Gallery — галерея с 3D-трансформациями |
 | `hover-gallery/` | Hover Gallery — интерактивная фотогалерея |
@@ -36,7 +38,7 @@ npx serve .
 
 ## Стек
 
-HTML5 · CSS3 · JavaScript · GSAP · Swiper.js · Flexbox · Grid · БЭМ
+HTML5 · CSS3 · JavaScript · React · GSAP · Swiper.js · Fetch API · Flexbox · Grid · БЭМ
 
 ## Автор
 

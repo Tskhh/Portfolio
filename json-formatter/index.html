@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JSON Formatter — форматирование и валидация JSON в браузере.">
+	<title>JSON Formatter — утилита</title>
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<meta name="theme-color" content="#3D3228">
+	<link rel="stylesheet" href="/css/project-back.css">
+	<link rel="stylesheet" href="/json-formatter/style.css">
+</head>
+<body>
+	<a href="/portfolio.html" class="project-back">К портфолио</a>
+
+	<main class="page">
+		<header class="page-header">
+			<p class="page-header__label">Pet project · Vanilla JS</p>
+			<h1>JSON Formatter</h1>
+			<p>Проверка, форматирование и минификация JSON прямо в браузере. Полезная утилита без лишних анимаций — только практичная логика.</p>
+		</header>
+
+		<div class="toolbar">
+			<button type="button" id="formatBtn" class="btn btn--primary">Форматировать</button>
+			<button type="button" id="minifyBtn" class="btn btn--outline">Минифицировать</button>
+			<button type="button" id="copyBtn" class="btn btn--outline">Копировать</button>
+			<button type="button" id="clearBtn" class="btn btn--ghost">Очистить</button>
+		</div>
+
+		<label class="field-label" for="jsonInput">Входной JSON</label>
+		<textarea id="jsonInput" spellcheck="false" placeholder='{"name":"Егор","role":"Frontend"}'></textarea>
+
+		<p id="status" class="status" role="status" aria-live="polite"></p>
+
+		<label class="field-label" for="jsonOutput">Результат</label>
+		<textarea id="jsonOutput" readonly spellcheck="false" placeholder="Здесь появится результат…"></textarea>
+	</main>
+
+	<script src="/json-formatter/app.js" defer></script>
+</body>
+</html>

@@ -567,6 +567,69 @@ body .top-line ul li.active::after {
 	border-radius: 20px;
 }
 
+.project-card__badge--react {
+	background: #61dafb;
+	color: #1a2a32;
+}
+
+.project-card__badge--pet {
+	background: rgba(255 248 238 / .92);
+	color: var(--color-brown);
+}
+
+.project-card__badge--tool {
+	background: #8fd694;
+	color: #1e3a24;
+}
+
+.project-card__badge--commercial {
+	background: var(--color-brown);
+	color: var(--color-vanilla);
+}
+
+.project-card__case {
+	margin-top: 4px;
+	padding-top: 12px;
+	border-top: 1px solid var(--border);
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+.project-card__case dt {
+	font-weight: 600;
+	color: var(--text);
+	margin-top: 8px;
+}
+
+.project-card__case dt:first-child {
+	margin-top: 0;
+}
+
+.project-card__case dd {
+	color: var(--text-muted);
+	margin-left: 0;
+}
+
+.project-card__image--placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--surface-2), var(--color-brown));
+	color: var(--color-vanilla);
+	font-weight: 700;
+	font-size: 15px;
+	text-align: center;
+	padding: 20px;
+}
+
+.project-card__image--react {
+	background: linear-gradient(135deg, #3d3228 0%, #1a2a32 55%, #61dafb 140%);
+}
+
+.project-card__image--json {
+	background: linear-gradient(135deg, #666560, #3d3228);
+}
+
 .project-card__title {
 	font-size: 20px;
 	font-weight: 700;

@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+	background: #666560;
+	color: #fff8ee;
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+.page {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 72px 20px 40px;
+}
+
+.page-header__label {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	opacity: .75;
+	margin-bottom: 8px;
+}
+
+.page-header h1 {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	margin-bottom: 8px;
+}
+
+.page-header p {
+	opacity: .85;
+	max-width: 640px;
+}
+
+.toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 24px 0 16px;
+}
+
+.btn {
+	border: none;
+	border-radius: 8px;
+	padding: 10px 16px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.btn--primary {
+	background: #fff8ee;
+	color: #3d3228;
+}
+
+.btn--outline {
+	background: transparent;
+	color: #fff8ee;
+	border: 1px solid rgba(255 248 238 / .35);
+}
+
+.btn--ghost {
+	background: rgba(61 50 40 / .55);
+	color: #fff8ee;
+}
+
+.field-label {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+textarea {
+	width: 100%;
+	min-height: 180px;
+	padding: 14px;
+	border: none;
+	border-radius: 10px;
+	background: #3d3228;
+	color: #fff8ee;
+	font-family: Consolas, 'Courier New', monospace;
+	font-size: 14px;
+	line-height: 1.5;
+	resize: vertical;
+	margin-bottom: 16px;
+}
+
+textarea::placeholder {
+	color: rgba(255 248 238 / .45);
+}
+
+.status {
+	min-height: 24px;
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+.status--ok {
+	color: #8fd694;
+}
+
+.status--error {
+	color: #ff8a80;
+}

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Портфолио Frontend-разработчика Егора Толстых — учебные и практические проекты.">
+	<meta name="description" content="Портфолио Frontend-разработчика Егора Толстых — коммерческий опыт, pet projects и case study.">
 	<title>Портфолио — Егор Толстых</title>
 	<link rel="icon" href="/favicon.ico" sizes="32x32">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -49,28 +49,59 @@
 			<header class="page-header">
 				<p class="page-header__label">Мои работы</p>
 				<h1 class="title-1">Портфолио</h1>
-				<p class="page-header__desc">Учебные проекты, которые я создал самостоятельно. Каждый демонстрирует работу с анимациями, адаптивной вёрсткой и JavaScript.</p>
+				<p class="page-header__desc">Коммерческий опыт, pet projects на React и API, а также интерактивные работы на HTML, CSS и JavaScript. У каждого ключевого проекта — короткий case study.</p>
 			</header>
 
 			<div class="portfolio-grid">
 
 				<article class="project-card">
-					<div class="project-card__image">
-						<img src="img/thumb_img111.jpg" alt="Скриншот проекта Parallax Forest" loading="lazy" decoding="async" width="640" height="400">
+					<div class="project-card__image project-card__image--placeholder project-card__image--react">
+						<span>GitHub Dashboard · React</span>
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
-						<h2 class="project-card__title">Parallax Forest</h2>
-						<p class="project-card__desc">Многослойный parallax-эффект при скролле. Атмосферная landing-страница с плавной анимацией слоёв.</p>
+						<span class="project-card__badge project-card__badge--react">React · API</span>
+						<h2 class="project-card__title">GitHub Dashboard</h2>
+						<p class="project-card__desc">Pet project: поиск разработчика, профиль, статистика и список репозиториев через GitHub REST API.</p>
+						<dl class="project-card__case">
+							<dt>Задача</dt>
+							<dd>Показать работу с React, fetch, состояниями loading/error и реальным API.</dd>
+							<dt>Решение</dt>
+							<dd>Компонентный UI, параллельные запросы профиля и репозиториев, обработка 404 и сетевых ошибок.</dd>
+						</dl>
+						<div class="project-card__tags">
+							<span class="project-card__tag">React</span>
+							<span class="project-card__tag">Fetch API</span>
+							<span class="project-card__tag">Vite</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="github-dashboard/" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/github-dashboard-src" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image project-card__image--placeholder project-card__image--json">
+						<span>JSON Formatter</span>
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge project-card__badge--tool">Утилита</span>
+						<h2 class="project-card__title">JSON Formatter</h2>
+						<p class="project-card__desc">Практичный инструмент: валидация, форматирование, минификация и копирование JSON без лишних эффектов.</p>
+						<dl class="project-card__case">
+							<dt>Задача</dt>
+							<dd>Сделать полезный инструмент, который показывает зрелый подход к UX и обработке ошибок.</dd>
+							<dt>Решение</dt>
+							<dd>Чистый Vanilla JS, понятные статусы, горячая клавиша Ctrl+Enter, clipboard API.</dd>
+						</dl>
 						<div class="project-card__tags">
 							<span class="project-card__tag">HTML</span>
 							<span class="project-card__tag">CSS</span>
-							<span class="project-card__tag">GSAP</span>
-							<span class="project-card__tag">ScrollTrigger</span>
+							<span class="project-card__tag">JavaScript</span>
 						</div>
 						<div class="project-card__actions">
-							<a href="parallax-forest/" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
-							<a href="https://github.com/Tskhh/Portfolio/tree/main/parallax-forest" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+							<a href="json-formatter/" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/json-formatter" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
 						</div>
 					</div>
 				</article>
@@ -80,9 +111,15 @@
 						<img src="img/img222.jpg" alt="Скриншот GameDev Landing" loading="lazy" decoding="async" width="640" height="400">
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
 						<h2 class="project-card__title">GameDev Landing</h2>
-						<p class="project-card__desc">Многостраничный лендинг игровой студии с адаптивной вёрсткой, формой подписки и валидацией email на JavaScript.</p>
+						<p class="project-card__desc">Многостраничный лендинг игровой студии: адаптив, формы, валидация email, структура из 3 страниц.</p>
+						<dl class="project-card__case">
+							<dt>Задача</dt>
+							<dd>Сверстать полноценный лендинг, а не одностраничный блок из туториала.</dd>
+							<dt>Решение</dt>
+							<dd>Flexbox-сетка, отдельные about/contacts, JS-валидация форм, оптимизация изображений под mobile.</dd>
+						</dl>
 						<div class="project-card__tags">
 							<span class="project-card__tag">HTML</span>
 							<span class="project-card__tag">CSS</span>
@@ -98,12 +135,39 @@
 
 				<article class="project-card">
 					<div class="project-card__image">
+						<img src="img/thumb_img111.jpg" alt="Скриншот проекта Parallax Forest" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
+						<h2 class="project-card__title">Parallax Forest</h2>
+						<p class="project-card__desc">Многослойный parallax при скролле с GSAP ScrollSmoother на desktop и облегчённой версией для телефонов.</p>
+						<dl class="project-card__case">
+							<dt>Задача</dt>
+							<dd>Освоить scroll-анимации и не «убить» производительность на мобильных.</dd>
+							<dt>Решение</dt>
+							<dd>Условная загрузка GSAP, lite-режим, сжатые слои, отключение parallax на touch-устройствах.</dd>
+						</dl>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">GSAP</span>
+							<span class="project-card__tag">ScrollTrigger</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="parallax-forest/" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/parallax-forest" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
 						<img src="img/thumb_img333.jpg" alt="Скриншот 3D Scroll Gallery" loading="lazy" decoding="async" width="640" height="400">
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
 						<h2 class="project-card__title">3D Scroll Gallery</h2>
-						<p class="project-card__desc">Галерея с 3D-трансформациями при прокрутке. Комбинация CSS perspective и scroll-based анимаций.</p>
+						<p class="project-card__desc">Галерея с 3D-трансформациями при прокрутке. CSS perspective + scroll-based анимации на JavaScript.</p>
 						<div class="project-card__tags">
 							<span class="project-card__tag">HTML</span>
 							<span class="project-card__tag">CSS 3D</span>
@@ -121,9 +185,9 @@
 						<img src="img/thumb_img4444.jpg" alt="Скриншот Hover Gallery" loading="lazy" decoding="async" width="640" height="400">
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
 						<h2 class="project-card__title">Hover Gallery</h2>
-						<p class="project-card__desc">Интерактивная фотогалерея с CSS-анимацией при наведении. Волновой эффект раскрытия изображений.</p>
+						<p class="project-card__desc">Интерактивная фотогалерея с CSS-анимацией при наведении и адаптивной grid-вёрсткой.</p>
 						<div class="project-card__tags">
 							<span class="project-card__tag">HTML</span>
 							<span class="project-card__tag">CSS</span>
@@ -141,7 +205,7 @@
 						<img src="img/img55555.jpg" alt="Скриншот Draggable Gallery" loading="lazy" decoding="async" width="640" height="400">
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
 						<h2 class="project-card__title">Draggable Gallery</h2>
 						<p class="project-card__desc">Галерея архитектурных фото с drag-and-drop навигацией и инерцией через GSAP Draggable.</p>
 						<div class="project-card__tags">
@@ -162,9 +226,9 @@
 						<img src="img/thumb_img666666.jpg" alt="Скриншот Swiper Portfolio" loading="lazy" decoding="async" width="640" height="400">
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
 						<h2 class="project-card__title">Swiper Portfolio</h2>
-						<p class="project-card__desc">Портфолио-слайдер на Swiper.js с синхронизированными каруселями и плавными переходами.</p>
+						<p class="project-card__desc">Портфолио-слайдер на Swiper.js с синхронизированными каруселями и адаптацией под mobile.</p>
 						<div class="project-card__tags">
 							<span class="project-card__tag">HTML</span>
 							<span class="project-card__tag">CSS</span>
@@ -183,9 +247,9 @@
 						<img src="img/thumb_img7777777.jpg" alt="Скриншот Magic List Parallax" loading="lazy" decoding="async" width="640" height="400">
 					</div>
 					<div class="project-card__body">
-						<span class="project-card__badge">Учебный проект</span>
+						<span class="project-card__badge project-card__badge--pet">Pet project</span>
 						<h2 class="project-card__title">Magic List Parallax</h2>
-						<p class="project-card__desc">Интерактивный список с parallax-курсором и фоновыми изображениями при наведении.</p>
+						<p class="project-card__desc">Интерактивный список с parallax-курсором на desktop и tap-режимом на телефонах.</p>
 						<div class="project-card__tags">
 							<span class="project-card__tag">HTML</span>
 							<span class="project-card__tag">CSS</span>
