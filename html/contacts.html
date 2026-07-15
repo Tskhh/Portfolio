@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Контакты — NovaPlay</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="container">
+		<a href="index.html" class="logo">NovaPlay</a>
+		<nav aria-label="Навигация">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="about.html">О студии</a></li>
+				<li><a href="../portfolio.html">Портфолио</a></li>
+				<li class="btn active"><a href="contacts.html">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="container hero-contacts">
+		<h1>Давайте создадим что-то крутое вместе</h1>
+		<p>Оставьте заявку — мы свяжемся с вами в ближайшее время.</p>
+		<img src="imag/wrld.png" alt="Глобус — символ международных проектов">
+	</section>
+
+	<section class="feedback">
+		<div class="container">
+			<h2>Написать нам</h2>
+			<p>Заполните форму, и мы ответим на ваш email.</p>
+
+			<form id="contactForm" novalidate>
+				<div class="inline">
+					<div>
+						<label for="firstName">Имя</label>
+						<input type="text" id="firstName" required placeholder="Иван">
+					</div>
+					<div>
+						<label for="lastName">Фамилия</label>
+						<input type="text" id="lastName" required placeholder="Иванов">
+					</div>
+				</div>
+				<label for="contactEmail">Email</label>
+				<input type="email" id="contactEmail" class="one-line" required placeholder="example@mail.ru">
+				<label for="contactMessage">Сообщение</label>
+				<textarea id="contactMessage" class="one-line" required placeholder="Расскажите о вашем проекте..."></textarea>
+				<button type="submit">Отправить</button>
+			</form>
+			<p id="contactStatus" class="email-status" role="status" aria-live="polite"></p>
+		</div>
+	</section>
+
+	<footer>
+		<div class="blocks container">
+			<div>
+				<span class="logo">NovaPlay</span>
+				<p>Учебный проект — лендинг игровой студии.</p>
+			</div>
+		</div>
+		<hr>
+		<p>© 2026 NovaPlay · Учебный проект</p>
+	</footer>
+
+	<script>
+		document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+			e.preventDefault()
+			const status = document.getElementById('contactStatus')
+			const firstName = document.getElementById('firstName').value.trim()
+			const lastName = document.getElementById('lastName').value.trim()
+			const email = document.getElementById('contactEmail').value.trim()
+			const message = document.getElementById('contactMessage').value.trim()
+
+			status.className = 'email-status'
+
+			if (!firstName || !lastName || !email || !message) {
+				status.textContent = 'Заполните все поля.'
+				status.classList.add('email-status--error')
+				return
+			}
+
+			if (!email.includes('@') || !email.includes('.')) {
+				status.textContent = 'Введите корректный email.'
+				status.classList.add('email-status--error')
+				return
+			}
+
+			status.textContent = 'Спасибо! Ваше сообщение отправлено.'
+			status.classList.add('email-status--success')
+			e.target.reset()
+		})
+	</script>
+</body>
+</html>

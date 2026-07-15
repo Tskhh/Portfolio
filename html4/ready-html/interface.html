@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Draggable Gallery — галерея с drag-and-drop на GSAP.">
+	<title>Draggable Gallery — учебный проект</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="../../css/project-back.css">
+	<script src="libs/gsap.min.js" defer></script>
+	<script src="libs/Draggable.min.js" defer></script>
+	<script src="libs/InertiaPlugin.min.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<style>
+		.gallery {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<a href="../../portfolio.html" class="project-back">К портфолио</a>
+
+   <h1 class="header">Архитектура <span>Загрузка...</span></h1>
+
+   <div class="gallery">
+	<div class="gallery_item"><img src="img/1.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/2.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/3.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/4.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/5.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/6.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/7.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/8.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/9.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/10.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/11.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/12.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/13.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/14.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/15.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/16.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/17.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/18.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/19.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/20.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/1.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/2.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/3.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/4.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/5.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/6.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/7.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/8.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/9.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/10.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/11.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/12.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/13.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/14.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/15.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/16.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/17.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/18.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/19.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/20.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/1.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/2.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/3.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/4.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/5.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/6.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/7.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/8.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/9.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/10.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/11.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/12.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/13.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/14.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/15.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/16.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/17.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/18.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/19.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/20.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/1.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/2.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/3.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/4.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/5.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/6.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/7.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/8.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/9.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/10.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/11.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/12.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/13.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/14.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/15.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/16.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/17.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/18.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/19.jpg" alt="Архитектурное фото"></div>
+	<div class="gallery_item"><img src="img/20.jpg" alt="Архитектурное фото"></div>
+   </div>
+
+
+	
+</body>
+</html>

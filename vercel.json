@@ -1,0 +1,36 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/indexMAIN.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/HTML6/app/index.html",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/ee.html",
+      "destination": "/portfolio",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Исходники и тяжёлые файлы (не нужны для деплоя)
+sources/
+html2/sources/
+assets/images/.ts/
+media/background-60.mp4
+
+# Системное
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.vercel
+
+# Временное
+text.txt
+*.tmp
+*.code-workspace
+
+# Аудио/видео исходники редакторов
+*.aup3
+*.prproj
+*.cube

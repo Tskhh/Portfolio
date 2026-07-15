@@ -1,88 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-    <link rel="stylesheet" href="/css/main.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Контакты Frontend-разработчика Егора Толстых — Москва.">
+	<title>Контакты — Егор Толстых</title>
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="(min-width: 769px)">
+
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/nav.js" defer></script>
+	<script src="js/contact.js" defer></script>
 </head>
 <body>
-<div class="top-line">
+
+	<header class="top-line top-line--static">
 		<div class="container container-top">
-			<div>
-				<div class="logo">
-					<img src="img/logo.svg" alt="Alt">
-				</div>
-			</div>
-			<div>
+			<a href="index.html" class="logo logo--text" aria-label="Егор Толстых — на главную">
+				<span class="logo__mark">ЕТ</span>
+				<span class="logo__name">Егор Толстых</span>
+			</a>
+
+			<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<nav id="main-nav" class="nav" aria-label="Основная навигация">
 				<ul class="main-mnu">
-					<li><a href="/indexMAIN.html">Main</a></li>
-					<li ><a href="/HTML6/app/index.html">Portfolio</a></li>
-					
-					<li ><a href="/skills.html">Skills</a></li>
-                    <li class="active"><a href="/contact.html">Contacts</a></li>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+					<li><a href="skills.html">Навыки</a></li>
+					<li class="active"><a href="contact.html">Контакты</a></li>
 				</ul>
-			</div>
+			</nav>
 		</div>
-	</div>
+	</header>
 
-    <header class="header">	
-
-     <main class="section">
+	<main class="page">
 		<div class="container">
-			<h1 class="title-1" style="color: #989a9e;">Contacts</h1>
-			<ul class="content-list">
-				<li class="content-list_item">
-					<h2 class="title-2">Location</h2>
-			<p>Moscow, Russia</p>
-				</li>
-				<li class="content-list_item">
-                    <h2 class="title-2">Telegram / WhatsApp</h2>
-			<p>@tolstykhh / +7 (925) 563-51-04</p>
-				</li>
-                <li class="content-list_item">
-                    <h2 class="title-2">Email</h2>
-			<p>egortolstyh1358@yandex.ru</p>
-				</li>
-			</ul>
+			<header class="page-header">
+				<p class="page-header__label">Связь</p>
+				<h1 class="title-1">Контакты</h1>
+				<p class="page-header__desc">Открыт к предложениям о работе, стажировкам и проектам. Отвечу в Telegram или по email.</p>
 			</header>
 
-			
+			<div class="contact-grid">
+				<div class="contact-info">
+					<div class="contact-item">
+						<p class="contact-item__label">Локация</p>
+						<p>Москва, Россия</p>
+						<p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">Удалённо или в офисе</p>
+					</div>
+
+					<div class="contact-item">
+						<p class="contact-item__label">Telegram</p>
+						<p><a href="https://t.me/tolstykhh" target="_blank" rel="noopener">@tolstykhh</a></p>
+					</div>
+
+					<div class="contact-item">
+						<p class="contact-item__label">Email</p>
+						<p><a href="mailto:egortolstyh1358@yandex.ru">egortolstyh1358@yandex.ru</a></p>
+					</div>
+
+					<div class="contact-item">
+						<p class="contact-item__label">Телефон</p>
+						<p><a href="tel:+79255635104">+7 (925) 563-51-04</a></p>
+					</div>
+
+					<div class="contact-item">
+						<p class="contact-item__label">GitHub</p>
+						<p><a href="https://github.com/Tskhh/Portfolio" target="_blank" rel="noopener">github.com/Tskhh/Portfolio</a></p>
+						<p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">Исходный код этого портфолио и всех проектов</p>
+					</div>
+
+					<div class="contact-item">
+						<p class="contact-item__label">Резюме</p>
+						<p><a href="assets/docs/resume.pdf" download="Tolstykh_Egor_Frontend.pdf">Скачать PDF</a></p>
+					</div>
+				</div>
+
+				<form class="contact-form" id="contact-form" novalidate>
+					<h2>Написать сообщение</h2>
+					<p>Форма откроет ваш почтовый клиент с готовым письмом.</p>
+
+					<div class="form-group">
+						<label for="name">Имя</label>
+						<input type="text" id="name" name="name" autocomplete="name" required placeholder="Ваше имя">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" autocomplete="email" required placeholder="example@mail.ru">
+					</div>
+
+					<div class="form-group">
+						<label for="message">Сообщение</label>
+						<textarea id="message" name="message" required placeholder="Расскажите о вакансии или проекте..."></textarea>
+					</div>
+
+					<button type="submit" class="btn btn--primary">Отправить</button>
+					<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+				</form>
+			</div>
 		</div>
-	 </main>
-   <!-- <footer class="footer">
-    <div class="container">
-        <div class="footer_wrapper">
-        <ul class="social">
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-1.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-2.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-3.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-4.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector.svg" alt="link"></a>
-            </li>
-            
-        </ul>
-        <div class="copyright">
-            <p>© 2025 frontend-dev.com</p>
-        </div>
-    </div>
-    </div>
-   </footer> -->
-<div class="othercontent">
-    <p>© Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique liberd
-      o sapiente impedit praesentium expedita unde dolores sequi sed blanditiis ma
-      agnam ea id suscipit consectetur, quasi dolor eaque hic sint! Culpa?</p>
-  </div>
-    </div>
-  </div> 
+	</main>
+
+	<footer class="site-footer">
+		<div class="container site-footer__inner">
+			<p>© 2026 Егор Толстых · Frontend-разработчик</p>
+			<p><a href="portfolio.html">Мои проекты</a> · <a href="https://github.com/Tskhh/Portfolio" target="_blank" rel="noopener">GitHub</a></p>
+		</div>
+	</footer>
+
 </body>
 </html>

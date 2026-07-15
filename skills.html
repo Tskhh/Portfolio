@@ -1,91 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <script src=".//HTML6/app/vendor/gsap/gsap.min.js" defer></script>
-  <script src=".//HTML6/app/vendor/gsap/ScrollTrigger.min.js" defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Навыки и опыт Frontend-разработчика Егора Толстых.">
+	<title>Навыки — Егор Толстых</title>
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  
-  <script src=".//HTML6/app/scripts/app.js" type="module"></script>
-    <link rel="stylesheet" href="/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="(min-width: 769px)">
+
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/nav.js" defer></script>
 </head>
 <body>
-<div class="top-line">
+
+	<header class="top-line top-line--static">
 		<div class="container container-top">
-			<div>
-				<div class="logo">
-					<img src="img/logo.svg" alt="Alt">
-				</div>
-			</div>
-			<div>
+			<a href="index.html" class="logo logo--text" aria-label="Егор Толстых — на главную">
+				<span class="logo__mark">ЕТ</span>
+				<span class="logo__name">Егор Толстых</span>
+			</a>
+
+			<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<nav id="main-nav" class="nav" aria-label="Основная навигация">
 				<ul class="main-mnu">
-					<li><a href="/indexMAIN.html">Main</a></li>
-					<li ><a href="/HTML6/app/index.html">Portfolio</a></li>
-					
-					<li class="active"><a href="/skills.html">Skills</a></li>
-					<li><a href="/contact.html">Contacts</a></li>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+					<li class="active"><a href="skills.html">Навыки</a></li>
+					<li><a href="contact.html">Контакты</a></li>
 				</ul>
-			</div>
+			</nav>
 		</div>
-	</div>
+	</header>
 
-    <header class="header">	
-
-     <main class="section">
+	<main class="page">
 		<div class="container">
-			<h1 class="title-1" style="color: #989a9e;">Skills</h1>
+			<header class="page-header">
+				<p class="page-header__label">Обо мне</p>
+				<h1 class="title-1">Навыки и опыт</h1>
+			</header>
+
+			<div class="about-block">
+				<p>Начинающий Frontend-разработчик с коммерческим опытом разработки и поддержки веб-сайтов. Уверенно владею HTML5 и CSS3, создаю адаптивные интерфейсы, работаю с Flexbox, Grid, SCSS и методологией БЭМ.</p>
+				<p style="margin-top: 12px;">Изучаю JavaScript и постоянно расширяю знания современного Frontend. Имею опыт работы с PHP, благодаря чему понимаю взаимодействие клиентской и серверной частей приложения. Быстро обучаюсь и заинтересован в профессиональном росте.</p>
+			</div>
+
 			<ul class="content-list">
 				<li class="content-list_item">
 					<h2 class="title-2">Frontend</h2>
-			<p>JavaScript, TypeScript, HTML, CSS, Bootstrap, ReactJS, Yarm</p>
+					<div class="skills-grid">
+						<span class="skill-tag">HTML5</span>
+						<span class="skill-tag">CSS3</span>
+						<span class="skill-tag">SCSS</span>
+						<span class="skill-tag">JavaScript</span>
+						<span class="skill-tag">Flexbox</span>
+						<span class="skill-tag">CSS Grid</span>
+						<span class="skill-tag">БЭМ</span>
+						<span class="skill-tag">Адаптивная вёрстка</span>
+						<span class="skill-tag">Git</span>
+					</div>
 				</li>
+
 				<li class="content-list_item">
-                    <h2 class="title-2">Backend</h2>
-			<p>NodeJS, MySQL</p>
+					<h2 class="title-2">Backend и инструменты</h2>
+					<div class="skills-grid">
+						<span class="skill-tag">PHP</span>
+						<span class="skill-tag">MySQL</span>
+						<span class="skill-tag">Node.js</span>
+					</div>
+					<p style="margin-top: 16px;">Работал с PHP-шаблонами в коммерческих проектах — понимаю, как клиентская часть связана с сервером.</p>
+				</li>
+
+				<li class="content-list_item">
+					<h2 class="title-2">Опыт работы</h2>
+					<div class="experience-item">
+						<p class="experience-item__period">Ноябрь 2025 — Май 2026 · 7 месяцев</p>
+						<p><strong>Frontend Developer · ООО «Сандио», Москва</strong></p>
+						<p style="margin-top: 8px;">Разрабатывал новые страницы корпоративных сайтов, поддерживал существующие проекты, создавал адаптивную вёрстку на HTML5, CSS3 и SCSS, работал с JavaScript и PHP-шаблонами.</p>
+					</div>
+				</li>
+
+				<li class="content-list_item">
+					<h2 class="title-2">Образование</h2>
+					<p><strong>МГОК</strong> — Информационные системы и программирование</p>
+					<p>Среднее специальное образование, 2026</p>
+				</li>
+
+				<li class="content-list_item">
+					<h2 class="title-2">Языки</h2>
+					<p>Русский — родной</p>
+					<p>Английский — B1 (средний)</p>
 				</li>
 			</ul>
-			</header>
-
-			
 		</div>
-	 </main>
-   <!-- <footer class="footer">
-    <div class="container">
-        <div class="footer_wrapper">
-        <ul class="social">
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-1.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-2.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-3.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector-4.svg" alt="link"></a>
-            </li>
-            <li class="social_item">
-                <a href="#!"><img src="/img/Vector.svg" alt="link"></a>
-            </li>
-            
-        </ul>
-        <div class="copyright">
-            <p>© 2025 frontend-dev.com</p>
-        </div>
-    </div>
-    </div>
-   </footer> -->
+	</main>
 
-    <div class="othercontent">
-    <p>© Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique liberd
-      o sapiente impedit praesentium expedita unde dolores sequi sed blanditiis ma
-      agnam ea id suscipit consectetur, quasi dolor eaque hic sint! Culpa?</p>
-  </div>
-    </div>
-  </div> 
+	<footer class="site-footer">
+		<div class="container site-footer__inner">
+			<p>© 2026 Егор Толстых · Frontend-разработчик</p>
+			<p>
+				<a href="https://github.com/Tskhh/Portfolio" target="_blank" rel="noopener">GitHub</a>
+				·
+				<a href="contact.html">Связаться</a>
+			</p>
+		</div>
+	</footer>
 
 </body>
 </html>

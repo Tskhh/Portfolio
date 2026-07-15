@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Портфолио Frontend-разработчика Егора Толстых — учебные и практические проекты.">
+	<title>Портфолио — Егор Толстых</title>
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="(min-width: 769px)">
+
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/nav.js" defer></script>
+</head>
+<body>
+
+	<header class="top-line top-line--static">
+		<div class="container container-top">
+			<a href="index.html" class="logo logo--text" aria-label="Егор Толстых — на главную">
+				<span class="logo__mark">ЕТ</span>
+				<span class="logo__name">Егор Толстых</span>
+			</a>
+
+			<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<nav id="main-nav" class="nav" aria-label="Основная навигация">
+				<ul class="main-mnu">
+					<li><a href="index.html">Главная</a></li>
+					<li class="active"><a href="portfolio.html">Портфолио</a></li>
+					<li><a href="skills.html">Навыки</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="page">
+		<div class="container">
+			<header class="page-header">
+				<p class="page-header__label">Мои работы</p>
+				<h1 class="title-1">Портфолио</h1>
+				<p class="page-header__desc">Учебные проекты, которые я создал самостоятельно. Каждый демонстрирует работу с анимациями, адаптивной вёрсткой и JavaScript.</p>
+			</header>
+
+			<div class="portfolio-grid">
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/thumb_img111.jpg" alt="Скриншот проекта Parallax Forest" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">Parallax Forest</h2>
+						<p class="project-card__desc">Многослойный parallax-эффект при скролле. Атмосферная landing-страница с плавной анимацией слоёв.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">GSAP</span>
+							<span class="project-card__tag">ScrollTrigger</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="forest/forest.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/forest" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/img222.jpg" alt="Скриншот GameDev Landing" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">GameDev Landing</h2>
+						<p class="project-card__desc">Многостраничный лендинг игровой студии с адаптивной вёрсткой, формой подписки и валидацией email на JavaScript.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">JavaScript</span>
+							<span class="project-card__tag">Flexbox</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="html/index.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/html" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/thumb_img333.jpg" alt="Скриншот 3D Scroll Gallery" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">3D Scroll Gallery</h2>
+						<p class="project-card__desc">Галерея с 3D-трансформациями при прокрутке. Комбинация CSS perspective и scroll-based анимаций.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS 3D</span>
+							<span class="project-card__tag">JavaScript</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="html2/index3d.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/html2" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/thumb_img4444.jpg" alt="Скриншот Hover Gallery" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">Hover Gallery</h2>
+						<p class="project-card__desc">Интерактивная фотогалерея с CSS-анимацией при наведении. Волновой эффект раскрытия изображений.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">Grid</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="html3/scroller.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/html3" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/img55555.jpg" alt="Скриншот Draggable Gallery" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">Draggable Gallery</h2>
+						<p class="project-card__desc">Галерея архитектурных фото с drag-and-drop навигацией и инерцией через GSAP Draggable.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">GSAP</span>
+							<span class="project-card__tag">Draggable</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="html4/ready-html/interface.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/html4" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/thumb_img666666.jpg" alt="Скриншот Swiper Portfolio" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">Swiper Portfolio</h2>
+						<p class="project-card__desc">Портфолио-слайдер на Swiper.js с синхронизированными каруселями и плавными переходами.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">Swiper.js</span>
+							<span class="project-card__tag">JavaScript</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="html5/ready-html/lastinproject.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/html5" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-card__image">
+						<img src="img/thumb_img7777777.jpg" alt="Скриншот Magic List Parallax" loading="lazy" decoding="async" width="640" height="400">
+					</div>
+					<div class="project-card__body">
+						<span class="project-card__badge">Учебный проект</span>
+						<h2 class="project-card__title">Magic List Parallax</h2>
+						<p class="project-card__desc">Интерактивный список с parallax-курсором и фоновыми изображениями при наведении.</p>
+						<div class="project-card__tags">
+							<span class="project-card__tag">HTML</span>
+							<span class="project-card__tag">CSS</span>
+							<span class="project-card__tag">JavaScript</span>
+						</div>
+						<div class="project-card__actions">
+							<a href="HTMLLL7/html/parallax2.html" class="btn btn--primary btn--small" target="_blank" rel="noopener">Открыть проект</a>
+							<a href="https://github.com/Tskhh/Portfolio/tree/main/HTMLLL7" class="btn btn--outline btn--small" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container site-footer__inner">
+			<p>© 2026 Егор Толстых · Frontend-разработчик</p>
+			<p>
+				<a href="https://github.com/Tskhh/Portfolio" target="_blank" rel="noopener">GitHub</a>
+				·
+				<a href="contact.html">Связаться</a>
+			</p>
+		</div>
+	</footer>
+
+</body>
+</html>

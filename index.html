@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Егор Толстых — Frontend-разработчик из Москвы. Портфолио, навыки и контакты.">
+	<meta name="author" content="Егор Толстых">
+	<title>Егор Толстых — Frontend-разработчик</title>
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<meta property="og:title" content="Егор Толстых — Frontend-разработчик">
+	<meta property="og:description" content="Портфолио Frontend-разработчика из Москвы. 7 месяцев коммерческого опыта, учебные проекты.">
+	<meta property="og:type" content="website">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="(min-width: 769px)">
+
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<script src="js/nav.js" defer></script>
+	<script src="js/app.js" defer></script>
+</head>
+<body>
+
+	<header class="top-line">
+		<div class="container container-top">
+			<a href="index.html" class="logo logo--text" aria-label="Егор Толстых — на главную">
+				<span class="logo__mark">ЕТ</span>
+				<span class="logo__name">Егор Толстых</span>
+			</a>
+
+			<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<nav id="main-nav" class="nav" aria-label="Основная навигация">
+				<ul class="main-mnu">
+					<li class="active"><a href="index.html">Главная</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+					<li><a href="skills.html">Навыки</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="swiper slider" aria-label="Презентация">
+
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide slide">
+					<div class="slide_content">
+						<p class="slide_label">Frontend-разработчик · Москва</p>
+						<h2>Егор Толстых</h2>
+						<p>Создаю адаптивные интерфейсы и поддерживаю реальные веб-проекты</p>
+						<div class="slide_actions">
+							<a href="portfolio.html" class="btn btn--primary">Смотреть портфолио</a>
+							<a href="assets/docs/resume.pdf" class="btn btn--outline" download="Tolstykh_Egor_Frontend.pdf">Скачать резюме</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="slide_content">
+						<p class="slide_label">Коммерческий опыт</p>
+						<h2>7 месяцев</h2>
+						<p>Разработка и поддержка корпоративных сайтов в ООО «Сандио»</p>
+						<div class="slide_actions">
+							<a href="skills.html" class="btn btn--primary">Мои навыки</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="slide_content">
+						<p class="slide_label">Стек технологий</p>
+						<h2>HTML · CSS · JS</h2>
+						<p>SCSS, БЭМ, Flexbox, Grid, Git, PHP, MySQL</p>
+						<div class="slide_actions">
+							<a href="skills.html" class="btn btn--primary">Подробнее</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<div class="slide_content">
+						<p class="slide_label">Учебные проекты</p>
+						<h2>Портфолио</h2>
+						<p>7 интерактивных проектов: parallax, 3D-scroll, анимации и галереи</p>
+						<div class="slide_actions">
+							<a href="portfolio.html" class="btn btn--primary">Все проекты</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="slider-bottom">
+				<div class="slider-pagination">
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="slider-navigation">
+					<button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
+					<button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="hero-bg" aria-hidden="true"></div>
+		<video class="video-background" muted playsinline preload="none" aria-hidden="true" data-src="media/background.mp4"></video>
+	</main>
+
+</body>
+</html>

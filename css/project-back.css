@@ -1,0 +1,44 @@
+.project-back {
+	position: fixed;
+	top: 16px;
+	left: 16px;
+	z-index: 10000;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 16px;
+	font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	text-decoration: none;
+	background: rgba(10 10 10 / .75);
+	border: 1px solid rgba(255 255 255 / .15);
+	border-radius: 8px;
+	backdrop-filter: blur(8px);
+	transition: background .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+.project-back:hover {
+	background: rgba(250 144 33 / .9);
+	border-color: rgba(250 144 33 / .5);
+}
+
+.project-back:focus-visible {
+	outline: 2px solid #FA9021;
+	outline-offset: 2px;
+}
+
+.project-back::before {
+	content: '←';
+	font-size: 16px;
+}
+
+@media (max-width: 480px) {
+	.project-back {
+		top: 12px;
+		left: 12px;
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+}
