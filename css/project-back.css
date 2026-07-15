@@ -12,16 +12,16 @@
 	font-weight: 500;
 	color: #F1EADA;
 	text-decoration: none;
-	background: rgba(88 71 56 / .85);
-	border: 1px solid rgba(241 234 218 / .2);
+	background: rgba(88 71 56 / .9);
+	border: 1px solid rgba(241 234 218 / .22);
 	border-radius: 8px;
 	backdrop-filter: blur(8px);
 	transition: background .2s ease, border-color .2s ease, transform .15s ease;
 }
 
 .project-back:hover {
-	background: #777672;
-	border-color: rgba(241 234 218 / .35);
+	background: #584738;
+	border-color: rgba(241 234 218 / .4);
 }
 
 .project-back:focus-visible {
