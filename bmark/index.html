@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="bmark — real estate marketplace landing page with property search and listings.">
+	<title>bmark — Real Estate Marketplace</title>
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<a href="/portfolio.html" class="project-back">К портфолио</a>
+
+	<header class="header">
+		<div class="container header__inner">
+			<nav class="header-nav">
+				<input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+				<a class="logo" href="#">bmark</a>
+				<label for="navToggle" class="burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+				<ul class="nav-menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#properties">Listing</a></li>
+					<li><a href="#about">Property</a></li>
+					<li><a href="#location">Agents</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+				<div class="login"><a class="btn" href="#">Sign In</a></div>
+			</nav>
+
+			<div class="hero">
+				<h1 class="title">Easy way to find a home<br>that's perfect for you</h1>
+				<p class="description">The finest and most trusted marketplace of design &amp; build house in the world.</p>
+			</div>
+
+			<div class="search-box">
+				<nav class="search-tabs" aria-label="Search type">
+					<a href="#" class="tab active">Rent</a>
+					<a href="#" class="tab">Buy</a>
+					<a href="#" class="tab">Sell</a>
+				</nav>
+				<form class="search-form" action="#" method="get">
+					<div class="input-group">
+						<label for="location">Location</label>
+						<input type="text" id="location" name="location" value="Los Angeles" placeholder="Enter a location">
+					</div>
+					<div class="input-group">
+						<label for="property-type">Property Type</label>
+						<input type="text" id="property-type" name="property_type" value="Deluxe" placeholder="Select type">
+					</div>
+					<div class="input-group">
+						<label for="price">Average Price</label>
+						<input type="text" id="price" name="price" value="$7000 - 8000" placeholder="Enter price range">
+					</div>
+					<button type="submit" class="btn btn-submit">Search</button>
+				</form>
+			</div>
+
+			<img class="header-hero-img" src="img/home.png" alt="Modern house exterior" loading="eager" width="1200" height="600">
+		</div>
+	</header>
+
+	<section class="objects" id="properties">
+		<div class="container">
+			<div class="objects__head">
+				<div>
+					<h2>See our properties</h2>
+					<p class="description">The modern way to sell/buy/rent your own home.</p>
+				</div>
+				<div class="controls" role="tablist" aria-label="Property filter">
+					<input type="radio" name="control" id="control1">
+					<label for="control1">Rent</label>
+					<input type="radio" name="control" id="control2" checked>
+					<label for="control2">Buy</label>
+					<input type="radio" name="control" id="control3">
+					<label for="control3">Sell</label>
+				</div>
+			</div>
+
+			<div class="cards">
+				<article class="card">
+					<img src="img/home1.png" alt="Nomaden Omah Sekut" loading="lazy" width="340" height="240">
+					<span class="name">Nomaden Omah Sekut</span>
+					<span class="place">San Diego, California, USA</span>
+					<p class="price">$699,000</p>
+					<span class="characteristics">2 Beds &nbsp;|&nbsp; 1 Bath &nbsp;|&nbsp; 1,109 sqft</span>
+					<a class="btn btn-details btn-hover" href="#">See Details</a>
+				</article>
+				<article class="card">
+					<img src="img/home2.png" alt="Real Bluestyle House" loading="lazy" width="340" height="240">
+					<span class="name">Real Bluestyle House</span>
+					<span class="place">San Diego, California, USA</span>
+					<p class="price">$1,000,000</p>
+					<span class="characteristics">3 Beds &nbsp;|&nbsp; 2 Bath &nbsp;|&nbsp; 1,309 sqft</span>
+					<a class="btn btn-details btn-hover" href="#">See Details</a>
+				</article>
+				<article class="card">
+					<img src="img/home3.png" alt="Luxury Umahu Mantappu" loading="lazy" width="340" height="240">
+					<span class="name">Luxury Umahu Mantappu</span>
+					<span class="place">San Diego, California, USA</span>
+					<p class="price">$599,000</p>
+					<span class="characteristics">2 Beds &nbsp;|&nbsp; 1 Bath &nbsp;|&nbsp; 1,009 sqft</span>
+					<a class="btn btn-details btn-hover" href="#">See Details</a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="container about__inner">
+			<div class="discover-place">
+				<span>Discover Place</span>
+				<p class="description">San Diego, CA</p>
+				<div class="discover-place__thumbs">
+					<img src="img/home1.png" alt="" loading="lazy" width="58" height="58">
+					<img src="img/home2.png" alt="" loading="lazy" width="58" height="58">
+					<img src="img/home3.png" alt="" loading="lazy" width="58" height="58">
+					<a href="#properties" aria-label="View more"><img src="img/Arrow2.png" alt="" width="58" height="58"></a>
+				</div>
+			</div>
+
+			<div class="house">
+				<img src="img/Mask_Group.png" alt="Luxury property interior" loading="lazy" width="795" height="600">
+			</div>
+
+			<div class="about-house">
+				<h2>See some benefit from our properties</h2>
+
+				<div class="about-one-house">
+					<div class="icon"><img src="img/protection.png" alt="" width="60" height="60"></div>
+					<div class="advantage">
+						<span class="house-advantage">100% Protection</span>
+						<p class="description">All secure protection for your future house</p>
+					</div>
+				</div>
+
+				<div class="about-one-house">
+					<div class="icon"><img src="img/house_top.png" alt="" width="60" height="60"></div>
+					<div class="advantage">
+						<span class="house-advantage">Top Tier House</span>
+						<p class="description">We just provide top tier house for you</p>
+					</div>
+				</div>
+
+				<div class="about-one-house">
+					<div class="icon"><img src="img/transparancy.png" alt="" width="60" height="60"></div>
+					<div class="advantage">
+						<span class="house-advantage">Transparency</span>
+						<p class="description">Clear process and honest pricing for every deal</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="location-showcase" id="location">
+		<img class="google" src="img/google.png" alt="" aria-hidden="true" loading="lazy" width="48" height="48">
+		<div class="container location__grid">
+			<div class="left-side">
+				<h2 class="title">What's happening in<br>San Diego, CA</h2>
+				<p class="description">
+					Over 30,000+ people work for us in more than 70 countries all over the world —
+					1,850 homes for sale, 2 open house, 3,700 homes recently sold, 150 price reduced.
+				</p>
+				<div class="stats-bar">
+					<ul>
+						<li><h3>1,850</h3><span class="stat">HOMES FOR SALE</span></li>
+						<li><h3>3,700</h3><span class="stat">RECENTLY SOLD</span></li>
+						<li><h3>12</h3><span class="stat">YEARS EXPERIENCE</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="card-main">
+				<i class="fa-solid fa-ellipsis-vertical" aria-hidden="true"></i>
+				<img class="new-house" src="img/new-house.png" alt="New listing preview" loading="lazy">
+				<div class="card-main__team">
+					<img class="human1" src="img/human1.png" alt="" width="40" height="40">
+					<img class="human2" src="img/human2.png" alt="" width="40" height="40">
+					<img class="human3" src="img/human3.png" alt="" width="40" height="40">
+					<img class="human4" src="img/human4.png" alt="" width="40" height="40">
+					<span class="people">10+ Talented People</span>
+				</div>
+				<p class="description">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+				</p>
+				<div class="card-main__actions">
+					<span><i class="fa-regular fa-comment" aria-hidden="true"></i><span class="link">100</span></span>
+					<span><i class="fa-solid fa-reply" aria-hidden="true"></i><span class="link">40</span></span>
+				</div>
+			</div>
+
+			<div class="card-profile">
+				<div class="profile">
+					<img src="img/house-san-diego.png" class="profile-avatar" alt="San Diego property" width="80" height="80">
+					<p class="city">San Diego, CA</p>
+					<p class="real">Real Estate</p>
+				</div>
+				<div class="profile-stats">
+					<ul>
+						<li class="posts">420 Posts</li>
+						<li class="followers">230k Followers</li>
+					</ul>
+				</div>
+				<div class="profile-btns">
+					<a href="#" class="btn-follow"><i class="fa-solid fa-check" aria-hidden="true"></i> Following</a>
+					<a href="#" class="btn-msg"><i class="fa-regular fa-comment" aria-hidden="true"></i> Messages</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
