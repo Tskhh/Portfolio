@@ -116,7 +116,7 @@ header nav ul li.active::after {
 
 .hero--info {
 	flex: 1 1 320px;
-	max-width: 560px;
+	max-width: 720px;
 	padding-top: 24px;
 }
 
@@ -531,9 +531,8 @@ footer > p {
 		padding-top: 8px;
 	}
 
-	.hero > img {
-		order: -1;
-		max-width: 280px;
+	.hero--info {
+		max-width: 100%;
 	}
 
 	header nav ul {
