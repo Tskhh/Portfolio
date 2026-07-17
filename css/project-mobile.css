@@ -1,0 +1,205 @@
+/* Shared mobile styles — only screens ≤768px. Desktop unchanged. */
+
+@media (max-width: 768px) {
+	html {
+		-webkit-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+	}
+
+	body {
+		overflow-x: hidden;
+		max-width: 100vw;
+	}
+
+	img,
+	video,
+	iframe {
+		max-width: 100%;
+		height: auto;
+	}
+
+	a,
+	button,
+	input,
+	textarea,
+	select,
+	[role='button'] {
+		touch-action: manipulation;
+	}
+
+	a,
+	button,
+	nav a,
+	.btn {
+		min-height: 44px;
+	}
+
+	.project-back {
+		top: max(12px, env(safe-area-inset-top, 0px));
+		left: max(12px, env(safe-area-inset-left, 0px));
+	}
+
+	/* Parallax Forest */
+	.lite-mode .main-header::after {
+		display: none;
+	}
+
+	.lite-mode .layers_base,
+	.lite-mode .layer_header {
+		transform: none !important;
+	}
+
+	.lite-mode .wrapper,
+	.lite-mode .content {
+		overflow-x: hidden;
+	}
+
+	/* 3D Scroll Gallery */
+	.lite-mode .container {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	/* Hover Gallery */
+	.lite-mode .items .item:active,
+	.lite-mode .items .item:focus {
+		width: calc(50% - 8px);
+		transform: none;
+		margin: 0;
+		z-index: 1;
+	}
+
+	/* Swiper Portfolio — static gallery without JS */
+	.is-mobile-swiper html,
+	.is-mobile-swiper body {
+		height: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.is-mobile-swiper .main-wrapper {
+		flex-direction: column;
+		height: auto;
+		min-height: 100vh;
+		padding: 72px 16px 32px;
+		padding-top: max(72px, calc(env(safe-area-inset-top, 0px) + 56px));
+		gap: 0;
+		background-attachment: scroll;
+		overflow-x: hidden;
+	}
+
+	.is-mobile-swiper .main-wrapper .slider:nth-child(n+2) {
+		display: none !important;
+	}
+
+	.is-mobile-swiper .slider {
+		transform: none !important;
+		width: 100%;
+		overflow: visible;
+		margin-bottom: 0;
+	}
+
+	.is-mobile-swiper .slider .swiper-wrapper {
+		display: flex !important;
+		flex-direction: column;
+		gap: 12px;
+		transform: none !important;
+		height: auto !important;
+	}
+
+	.is-mobile-swiper .swiper-slide {
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 !important;
+	}
+
+	.is-mobile-swiper .slider_item {
+		width: 100%;
+		margin-bottom: 0;
+		box-shadow: none;
+		cursor: default;
+	}
+
+	.is-mobile-swiper .slider:nth-child(odd) .slider_img {
+		transform: none;
+	}
+
+	.is-mobile-swiper .slider_img {
+		min-height: 180px;
+		aspect-ratio: 16 / 10;
+		border-radius: 8px;
+	}
+
+	/* Magic List */
+	.lite-mode .magic-list_item {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.lite-mode .magic-list_item.is-active {
+		background-color: rgba(255 255 255 / .08);
+	}
+
+	/* GameDev Landing */
+	.gamedev-mobile header.container {
+		padding-top: 48px;
+	}
+
+	.gamedev-mobile header nav ul {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		gap: 12px;
+		padding-bottom: 4px;
+		scrollbar-width: none;
+	}
+
+	.gamedev-mobile header nav ul::-webkit-scrollbar {
+		display: none;
+	}
+
+	.gamedev-mobile header nav ul li a,
+	.gamedev-mobile header nav ul li.btn a {
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+	}
+
+	.gamedev-mobile .email-form {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.gamedev-mobile .email .block input,
+	.gamedev-mobile .email .block button {
+		width: 100%;
+	}
+
+	.gamedev-mobile .projects .images img {
+		max-width: 100%;
+		flex: 1 1 100%;
+	}
+
+	.gamedev-mobile .trending .games .block {
+		flex: 1 1 calc(50% - 10px);
+		max-width: calc(50% - 10px);
+	}
+
+	/* Draggable gallery */
+	.lite-mode .gallery {
+		will-change: auto !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.gamedev-mobile .trending .games .block {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+
+	.lite-mode .item {
+		width: 100%;
+		height: 140px;
+	}
+}

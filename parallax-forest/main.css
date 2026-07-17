@@ -168,6 +168,10 @@ border-bottom: 5px solid #DC7000;
 }
 
 @media (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
 	.layers {
 		height: 65vh;
 		min-height: 360px;

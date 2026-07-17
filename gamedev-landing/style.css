@@ -524,6 +524,11 @@ footer > p {
 @media (max-width: 768px) {
 	body {
 		font-family: system-ui, sans-serif;
+		overflow-x: hidden;
+	}
+
+	.wrapper {
+		overflow-x: hidden;
 	}
 
 	.hero.container {

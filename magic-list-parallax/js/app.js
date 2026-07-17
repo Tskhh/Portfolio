@@ -6,7 +6,7 @@ if (!isMobile) {
 		document.body.style.cssText = `--move-x: ${e.clientX}px; --move-y: ${e.clientY}px;`
 	}, { passive: true })
 } else {
-	document.documentElement.classList.add('is-mobile-list')
+	document.documentElement.classList.add('is-mobile-list', 'lite-mode')
 
 	document.querySelectorAll('.magic-list_item').forEach((item) => {
 		item.addEventListener('click', () => {

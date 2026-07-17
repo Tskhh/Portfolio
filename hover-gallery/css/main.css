@@ -104,7 +104,15 @@ body {
 }
 
 @media (max-width: 768px) {
-    .wrapper {
+	body {
+		overflow-x: hidden;
+	}
+
+	.wrapper {
+		overflow-x: hidden;
+		min-height: 100vh;
+		padding-top: 48px;
+	}
         height: auto;
         min-height: 100vh;
         padding: 80px 12px 24px;

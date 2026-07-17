@@ -75,6 +75,9 @@ body {
 }
 
 @media (max-width: 991px) {
+	.loaded .header span {
+		opacity: 0;
+	}
 	body {
 		overflow: auto;
 		height: auto;

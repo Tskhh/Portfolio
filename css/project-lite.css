@@ -75,6 +75,23 @@
 	font-family: system-ui, -apple-system, 'Segoe UI', sans-serif !important;
 }
 
+@media (max-width: 768px) {
+	.lite-mode,
+	.lite-mode body {
+		overflow-x: hidden;
+		max-width: 100vw;
+	}
+
+	.lite-mode .gallery,
+	.lite-mode .main-wrapper,
+	.lite-mode .wrapper,
+	.lite-mode .container,
+	.lite-mode .items {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+}
+
 @media (max-width: 1024px) {
 	img {
 		content-visibility: auto;
