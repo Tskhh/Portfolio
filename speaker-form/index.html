@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Форма заявки спикера — анкета с валидацией, маской телефона, загрузкой файлов и reCAPTCHA.">
+	<title>Хочу быть спикером</title>
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/css/project-back.css">
+	<link rel="stylesheet" href="/speaker-form/css/style.css">
+</head>
+<body>
+	<a href="/portfolio.html" class="project-back">К портфолио</a>
+
+	<div class="sfp-page">
+		<div class="sfp-card">
+			<main class="sfp-main">
+				<h1 class="sfp-title">Хочу быть спикером</h1>
+				<p class="sfp-description">
+					Заполните анкету, чтобы мы могли связаться с вами и обсудить участие в программе мероприятий.
+				</p>
+
+				<form class="sfp-form" id="speakerForm" novalidate>
+					<div class="sfp-form-grid">
+						<div class="sfp-form-column">
+							<div class="sfp-form-group">
+								<label for="lastName">Фамилия</label>
+								<input type="text" id="lastName" name="lastName" placeholder="Иванов"
+									autocomplete="family-name" required data-required="true"
+									data-validate="name" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="firstName">Имя</label>
+								<input type="text" id="firstName" name="firstName" placeholder="Алексей"
+									autocomplete="given-name" required data-required="true"
+									data-validate="name" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="patronymic">Отчество</label>
+								<input type="text" id="patronymic" name="patronymic" placeholder="Сергеевич"
+									data-validate="name">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="city">Город</label>
+								<input type="text" id="city" name="city" placeholder="Москва"
+									autocomplete="address-level2" required data-required="true"
+									data-validate="name" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="phone">Телефон</label>
+								<input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__"
+									autocomplete="tel-national" required data-required="true" data-phone="true"
+									data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="email">Почта</label>
+								<input type="email" id="email" name="email" placeholder="name@example.com"
+									autocomplete="email" required data-required="true" data-meaningful="true">
+							</div>
+						</div>
+
+						<div class="sfp-form-column">
+							<div class="sfp-form-group">
+								<label for="company">Компания</label>
+								<input type="text" id="company" name="company" placeholder="Название компании"
+									autocomplete="organization" required data-required="true" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="position">Должность</label>
+								<input type="text" id="position" name="position" placeholder="Руководитель направления"
+									autocomplete="organization-title" required data-required="true" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="eventName">Название мероприятия</label>
+								<input type="text" id="eventName" name="eventName" placeholder="CI/CD Online"
+									required data-required="true" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group">
+								<label for="topic">Тема доклада</label>
+								<input type="text" id="topic" name="topic" placeholder="CI/CD для бизнеса"
+									required data-required="true" data-meaningful="true">
+							</div>
+
+							<div class="sfp-form-group sfp-duration-group">
+								<label for="duration">
+									Продолжительность доклада
+									<span class="sfp-duration-hint">(минуты)</span>
+								</label>
+								<div class="sfp-duration-controls">
+									<div class="sfp-duration-input-wrapper">
+										<input type="number" id="duration" name="duration" min="5" max="180" step="5"
+											value="30" placeholder="30" required data-required="true"
+											data-meaningful="true">
+										<span class="sfp-duration-unit">мин</span>
+									</div>
+									<input type="range" id="durationSlider" min="5" max="180" step="5" value="30"
+										aria-label="Продолжительность доклада, минуты">
+								</div>
+							</div>
+
+							<div class="sfp-upload-section">
+								<div class="sfp-upload-box" id="fileUploadBox" tabindex="0">
+									<img src="/speaker-form/img/Group.png" alt="" class="sfp-upload-icon" aria-hidden="true">
+									<p class="sfp-upload-text">
+										Перетащите файлы или <span class="sfp-upload-link">выберите на компьютере</span>
+									</p>
+									<small class="sfp-upload-hint">PDF, презентации, изображения, до 25 МБ за файл</small>
+									<input type="file" id="fileInput" name="files" multiple class="sfp-file-input"
+										aria-label="Загрузить файлы">
+								</div>
+								<div class="sfp-file-preview" id="filePreview" aria-live="polite">
+									<p class="sfp-file-preview-placeholder">Файлы пока не добавлены</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="sfp-consent-field">
+						<label class="sfp-consent-label" for="consent">
+							<input type="checkbox" id="consent" name="consent" required data-required="true">
+							<span>
+								Согласен на обработку персональных данных и принимаю условия
+								<a href="#" class="sfp-consent-link">политики конфиденциальности</a>
+							</span>
+						</label>
+					</div>
+
+					<div class="sfp-captcha" aria-hidden="true">
+						<div class="sfp-recaptcha">
+							<input type="checkbox" id="recaptcha" name="recaptcha" required disabled>
+							<label for="recaptcha">Я не робот</label>
+							<img src="/speaker-form/img/logos_recaptcha.png" alt="reCAPTCHA" class="sfp-recaptcha-logo">
+						</div>
+					</div>
+
+					<button type="submit" class="sfp-submit-btn">Отправить</button>
+				</form>
+			</main>
+		</div>
+	</div>
+
+	<script src="/speaker-form/js/script.js"></script>
+</body>
+</html>
