@@ -1,0 +1,10 @@
+{
+	"name": "Vault — финансы",
+	"short_name": "Vault",
+	"description": "Mobile-first трекер личных финансов",
+	"start_url": "/vault/",
+	"display": "standalone",
+	"background_color": "#070B14",
+	"theme_color": "#070B14",
+	"lang": "ru"
+}

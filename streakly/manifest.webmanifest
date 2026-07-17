@@ -1,0 +1,10 @@
+{
+	"name": "Streakly — трекер привычек",
+	"short_name": "Streakly",
+	"description": "Mobile-first трекер привычек с streak и статистикой",
+	"start_url": "/streakly/",
+	"display": "standalone",
+	"background_color": "#0A0A0F",
+	"theme_color": "#0A0A0F",
+	"lang": "ru"
+}

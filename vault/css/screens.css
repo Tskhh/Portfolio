@@ -1,0 +1,14 @@
+.line-chart { height: 140px; }
+.donut-center { font-size: 14px; font-weight: 600; fill: var(--text-secondary); }
+.donut-value { font-size: 22px; font-weight: 700; fill: var(--text-primary); }
+
+.home-cards-scroll {
+	display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 20px;
+	scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+}
+.home-cards-scroll > * { scroll-snap-align: start; flex: 0 0 85%; max-width: 320px; }
+
+.analytics-grid { display: grid; gap: 16px; }
+
+.cards-actions { display: flex; gap: 10px; margin-bottom: 16px; }
+.cards-actions .btn { flex: 1; min-height: 44px; font-size: 14px; }
