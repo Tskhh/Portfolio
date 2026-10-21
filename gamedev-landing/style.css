@@ -120,7 +120,7 @@ header nav ul li.active::after {
 	padding-top: 24px;
 }
 
-.hero--info h2 {
+.hero--info .hero-eyebrow {
 	color: #E87D0E;
 	font-size: 18px;
 	font-weight: 600;

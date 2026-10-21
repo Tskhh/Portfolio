@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="/speaker-form/css/style.css">
 </head>
 <body>
-	<a href="/portfolio.html" class="project-back">К портфолио</a>
+	<a href="/portfolio" class="project-back">К портфолио</a>
 
 	<div class="sfp-page">
 		<div class="sfp-card">
@@ -54,7 +54,7 @@
 							<div class="sfp-form-group">
 								<label for="phone">Телефон</label>
 								<input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__"
-									autocomplete="tel-national" required data-required="true" data-phone="true"
+									autocomplete="tel" required data-required="true" data-phone="true"
 									data-meaningful="true">
 							</div>
 
@@ -115,6 +115,7 @@
 									</p>
 									<small class="sfp-upload-hint">PDF, презентации, изображения, до 25 МБ за файл</small>
 									<input type="file" id="fileInput" name="files" multiple class="sfp-file-input"
+										accept=".pdf,.ppt,.pptx,image/jpeg,image/png,image/webp"
 										aria-label="Загрузить файлы">
 								</div>
 								<div class="sfp-file-preview" id="filePreview" aria-live="polite">
@@ -125,7 +126,7 @@
 					</div>
 
 					<div class="sfp-consent-field">
-						<label class="sfp-consent-label" for="consent">
+						<label class="sfp-consent-label">
 							<input type="checkbox" id="consent" name="consent" required data-required="true">
 							<span>
 								Согласен на обработку персональных данных и принимаю условия

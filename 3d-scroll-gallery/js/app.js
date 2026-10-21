@@ -1,7 +1,8 @@
 const isMobile = window.matchMedia('(max-width: 1024px)').matches ||
 	window.matchMedia('(hover: none) and (pointer: coarse)').matches
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-if (!isMobile) {
+if (!isMobile && !reduceMotion) {
 	document.querySelectorAll('video[data-src]').forEach((video) => {
 		video.src = video.dataset.src
 		video.autoplay = true
@@ -14,15 +15,24 @@ if (!isMobile) {
 	const frames = Array.from(document.getElementsByClassName('frame'))
 	const zVals = frames.map((_, i) => (i * zSpacing) + zSpacing)
 
-	window.addEventListener('scroll', () => {
+	let ticking = false
+	const updateFrames = () => {
 		const top = document.documentElement.scrollTop
 		const delta = lastPos - top
 		lastPos = top
 
 		frames.forEach((frame, i) => {
 			zVals[i] += delta * -5.5
-			frame.setAttribute('style', `transform: translateZ(${zVals[i]}px); opacity: ${zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0}`)
+			frame.style.transform = `translateZ(${zVals[i]}px)`
+			frame.style.opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? '1' : '0'
 		})
+		ticking = false
+	}
+
+	window.addEventListener('scroll', () => {
+		if (ticking) return
+		ticking = true
+		requestAnimationFrame(updateFrames)
 	}, { passive: true })
 
 	window.scrollTo(0, 1)
@@ -35,4 +45,22 @@ if (!isMobile) {
 }
 
 const soundButton = document.querySelector('.soundbutton')
-if (soundButton) soundButton.style.display = 'none'
+const audio = document.querySelector('.audio')
+
+if (soundButton && audio && !isMobile && !reduceMotion) {
+	soundButton.addEventListener('click', async () => {
+		if (audio.paused) {
+			try {
+				await audio.play()
+			} catch {
+				return
+			}
+		} else {
+			audio.pause()
+		}
+		soundButton.classList.toggle('paused', audio.paused)
+		soundButton.setAttribute('aria-label', audio.paused ? 'Включить звук' : 'Выключить звук')
+	})
+} else if (soundButton) {
+	soundButton.hidden = true
+}

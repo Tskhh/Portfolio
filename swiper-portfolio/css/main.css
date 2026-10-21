@@ -52,7 +52,7 @@ html, body {
 	transform: rotate(-180deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	html,
 	body {
 		height: auto;

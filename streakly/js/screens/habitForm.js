@@ -1,7 +1,7 @@
 import { addHabit, updateHabit, getHabit } from '../store.js';
 import { closeBottomSheet, openBottomSheet } from '../ui/bottomSheet.js';
 import { toast } from '../ui/toast.js';
-import { el } from '../utils/dom.js';
+import { el, escapeHtml } from '../utils/dom.js';
 
 const COLORS = ['#6C5CE7', '#00D2A0', '#3B82F6', '#F59E0B', '#FF6B6B', '#EC4899', '#14B8A6', '#8B5CF6'];
 const ICONS = ['💪', '📚', '💧', '🧘', '🏃', '😴', '🥗', '💻', '🎯', '✍️', '🎸', '🧠'];
@@ -15,18 +15,18 @@ export function openHabitForm(habitId = null) {
 		<form id="habitForm">
 			<div class="field">
 				<label for="habitTitle">Название</label>
-				<input id="habitTitle" name="title" required maxlength="48" placeholder="Например: Утренняя пробежка" value="${existing?.title ?? ''}">
+				<input id="habitTitle" name="title" required maxlength="48" placeholder="Например: Утренняя пробежка" value="${escapeHtml(existing?.title ?? '')}">
 			</div>
 			<div class="field">
 				<label>Иконка</label>
 				<div class="icon-picker" id="iconPicker">
-					${ICONS.map((ic) => `<button type="button" data-icon="${ic}" class="${ic === selectedIcon ? 'is-active' : ''}">${ic}</button>`).join('')}
+					${ICONS.map((ic) => `<button type="button" data-icon="${ic}" aria-label="Выбрать иконку ${ic}" class="${ic === selectedIcon ? 'is-active' : ''}">${ic}</button>`).join('')}
 				</div>
 			</div>
 			<div class="field">
 				<label>Цвет</label>
 				<div class="color-picker" id="colorPicker">
-					${COLORS.map((c) => `<button type="button" data-color="${c}" style="background:${c}" class="${c === selectedColor ? 'is-active' : ''}"></button>`).join('')}
+					${COLORS.map((c) => `<button type="button" data-color="${c}" aria-label="Выбрать цвет ${c}" style="background:${c}" class="${c === selectedColor ? 'is-active' : ''}"></button>`).join('')}
 				</div>
 			</div>
 			<div class="form-actions">

@@ -1,6 +1,6 @@
-/* Shared mobile styles — only screens ≤768px. Desktop unchanged. */
+/* Shared mobile/tablet styles — screens ≤1024px. */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	html {
 		-webkit-text-size-adjust: 100%;
 		text-size-adjust: 100%;

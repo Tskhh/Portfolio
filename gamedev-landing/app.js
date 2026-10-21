@@ -1,4 +1,5 @@
-document.getElementById('subscribeBtn')?.addEventListener('click', () => {
+document.getElementById('subscribeForm')?.addEventListener('submit', (event) => {
+	event.preventDefault()
 	const emailField = document.getElementById('emailField')
 	const status = document.getElementById('emailStatus')
 	const email = emailField?.value.trim() || ''
@@ -13,18 +14,13 @@ document.getElementById('subscribeBtn')?.addEventListener('click', () => {
 		return
 	}
 
-	if (!email.includes('@')) {
-		status.textContent = 'Email должен содержать символ @.'
-		status.classList.add('email-status--error')
-		return
-	}
-
-	if (!email.includes('.')) {
-		status.textContent = 'Email должен содержать домен (например, .ru).'
+	if (!emailField.checkValidity()) {
+		status.textContent = 'Введите корректный email.'
 		status.classList.add('email-status--error')
 		return
 	}
 
 	status.textContent = 'Спасибо! Email принят.'
 	status.classList.add('email-status--success')
+	event.currentTarget.reset()
 })

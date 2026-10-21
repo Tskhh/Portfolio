@@ -52,6 +52,7 @@ ul { list-style: none; }
 .app-main {
 	flex: 1;
 	overflow-y: auto;
+	overflow-x: hidden;
 	padding: 0 20px calc(var(--nav-height) + var(--safe-bottom) + 16px);
 	-webkit-overflow-scrolling: touch;
 }

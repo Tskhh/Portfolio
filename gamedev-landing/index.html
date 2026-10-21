@@ -18,33 +18,33 @@
 </head>
 <body class="gamedev-mobile">
 
-	<a href="/portfolio.html" class="project-back">К портфолио</a>
+	<a href="/portfolio" class="project-back">К портфолио</a>
 
 	<div class="wrapper">
 		<header class="container">
-			<a href="index.html" class="logo">NovaPlay</a>
+			<a href="/gamedev-landing" class="logo">NovaPlay</a>
 			<nav aria-label="Навигация">
 				<ul>
-					<li class="active"><a href="index.html">Главная</a></li>
-					<li><a href="about.html">О студии</a></li>
-					<li><a href="/portfolio.html">Портфолио</a></li>
-					<li class="btn"><a href="contacts.html">Контакты</a></li>
+					<li class="active"><a href="/gamedev-landing">Главная</a></li>
+					<li><a href="/gamedev-landing/about">О студии</a></li>
+					<li><a href="/portfolio">Портфолио</a></li>
+					<li class="btn"><a href="/gamedev-landing/contacts">Контакты</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<section class="hero container">
 			<div class="hero--info">
-				<h2>Разработка игр</h2>
+				<p class="hero-eyebrow">Разработка игр</p>
 				<h1>Создаём игровые миры, в которые хочется возвращаться</h1>
 				<p>Учебный многостраничный лендинг с адаптивной вёрсткой, секциями услуг и формой подписки с валидацией на JavaScript.</p>
-				<a href="about.html" class="btn">Подробнее о студии</a>
+				<a href="/gamedev-landing/about" class="btn">Подробнее о студии</a>
 			</div>
 		</section>
 
 		<section class="container trending">
-			<a href="#" class="see-all" aria-label="Все игры">Все игры</a>
-			<h3>Популярные проекты</h3>
+			<a href="#projects" class="see-all" aria-label="Все игры">Все игры</a>
+			<h2>Популярные проекты</h2>
 			<div class="games">
 				<div class="block">
 					<img src="imag/lite_game2.jpg" alt="Обложка игры Cyber Arena" loading="lazy" decoding="async">
@@ -110,7 +110,7 @@
 	</section>
 
 	<div class="wrapper">
-		<section class="container projects">
+		<section class="container projects" id="projects">
 			<h3>Последние работы</h3>
 			<p>Подборка визуальных концептов и скриншотов из наших проектов.</p>
 			<div class="images">
@@ -133,10 +133,10 @@
 					<h4>Будьте в курсе</h4>
 					<p>Подпишитесь на рассылку NovaPlay. Без спама — только важные новости.</p>
 				</div>
-				<div class="email-form">
-					<input type="email" id="emailField" placeholder="Ваш email" aria-label="Email для подписки">
-					<button type="button" id="subscribeBtn">Подписаться</button>
-				</div>
+				<form class="email-form" id="subscribeForm">
+					<input type="email" id="emailField" placeholder="Ваш email" aria-label="Email для подписки" required>
+					<button type="submit" id="subscribeBtn">Подписаться</button>
+				</form>
 			</div>
 			<p id="emailStatus" class="email-status" role="status" aria-live="polite"></p>
 		</section>
@@ -151,14 +151,14 @@
 			<div>
 				<h4>Навигация</h4>
 				<ul>
-					<li><a href="about.html">О студии</a></li>
-					<li><a href="/portfolio.html">Портфолио автора</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="/gamedev-landing/about">О студии</a></li>
+					<li><a href="/portfolio">Портфолио автора</a></li>
+					<li><a href="/gamedev-landing/contacts">Контакты</a></li>
 				</ul>
 			</div>
 			<div>
 				<h4>Контакты</h4>
-				<p>egortolstyh1358@yandex.ru</p>
+				<p><a href="mailto:egortolstyh1358@yandex.ru">egortolstyh1358@yandex.ru</a></p>
 				<p><a href="https://t.me/tolstykhh" target="_blank" rel="noopener">@tolstykhh</a></p>
 			</div>
 		</div>

@@ -12,6 +12,8 @@ const filePreview = document.getElementById('filePreview');
 
 const PHONE_TEMPLATE = '+7 (___) ___-__-__';
 const DURATION_DEFAULT = 30;
+const MAX_FILE_SIZE = 25 * 1024 * 1024;
+const ALLOWED_FILE_EXTENSIONS = new Set(['pdf', 'ppt', 'pptx', 'jpg', 'jpeg', 'png', 'webp']);
 let captchaVisible = false;
 let persistedFiles = [];
 
@@ -111,12 +113,18 @@ const validateField = (input) => {
     const value = input.value.trim();
     let isValid = true;
 
-    if (input.dataset.required === 'true' && !value) {
+    if (input.type === 'checkbox') {
+        isValid = input.dataset.required !== 'true' || input.checked;
+    } else if (input.dataset.required === 'true' && !value) {
         isValid = false;
     }
 
-    if (isValid && input.dataset.meaningful === 'true' && !hasMeaningfulChars(value)) {
+    if (isValid && input.type !== 'checkbox' && input.dataset.meaningful === 'true' && !hasMeaningfulChars(value)) {
         isValid = false;
+    }
+
+    if (isValid && input.type === 'email') {
+        isValid = input.checkValidity();
     }
 
     if (isValid && input.dataset.phone === 'true') {
@@ -239,7 +247,23 @@ const rememberFiles = (files, { append = false } = {}) => {
     const incoming = Array.from(files);
     if (!incoming.length) return;
 
-    persistedFiles = append ? [...persistedFiles, ...incoming] : incoming;
+    const accepted = incoming.filter((file) => {
+        const extension = file.name.split('.').pop()?.toLowerCase() ?? '';
+        return file.size <= MAX_FILE_SIZE && ALLOWED_FILE_EXTENSIONS.has(extension);
+    });
+
+    if (accepted.length !== incoming.length) {
+        alert('Можно добавить PDF, PPT/PPTX, JPG, PNG или WebP размером до 25 МБ.');
+    }
+
+    if (!accepted.length) {
+        restorePersistedFiles();
+        return;
+    }
+
+    const base = append ? [...persistedFiles, ...accepted] : accepted;
+    const unique = new Map(base.map((file) => [`${file.name}:${file.size}:${file.lastModified}`, file]));
+    persistedFiles = [...unique.values()];
     updateFileInputFromPersisted();
     synchronizeFiles(persistedFiles);
 };

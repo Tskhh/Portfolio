@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 	font-family: raleway_c;
 	src: url(../fonts/raleway-v22-cyrillic-300.woff2);
 	font-weight: 300;
+	overflow-x: hidden;
 }
 @font-face {
 	font-family: raleway_c;
@@ -61,7 +62,7 @@ body {
 	will-change: transform;
 	transform-style: preserve-3d;
 }
-h1, h2 h3, h4 {
+h1, h2, h3, h4 {
     font-weight: 100;
     text-transform: uppercase;
     width: min-content;
@@ -129,7 +130,7 @@ video.frame-media_left {
     opacity: .25;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	body {
 		height: auto;
 		overflow-x: hidden;
@@ -199,5 +200,20 @@ video.frame-media_left {
 
 	.soundbutton {
 		display: none;
+	}
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+	.text-right > *,
+	.text-left > * {
+		left: auto;
+		right: auto;
+		max-width: min(42rem, 80vw);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.frame {
+		transition: none;
 	}
 }

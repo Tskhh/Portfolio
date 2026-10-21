@@ -1,8 +1,9 @@
-const isMobile = window.matchMedia('(max-width: 768px)').matches
+const isMobile = window.matchMedia('(max-width: 1024px)').matches ||
+	window.matchMedia('(hover: none) and (pointer: coarse)').matches
 
 const desktopConfig = {
 	freeMode: true,
-	centerSlides: true,
+	centeredSlides: true,
 	direction: 'vertical',
 	mousewheel: true,
 	slidesPerView: 1.75,

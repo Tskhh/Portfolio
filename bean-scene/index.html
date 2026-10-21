@@ -14,17 +14,17 @@
 	<link rel="stylesheet" href="/bean-scene/css/main.css">
 </head>
 <body>
-	<a href="/portfolio.html" class="project-back">К портфолио</a>
+	<a href="/portfolio" class="project-back">К портфолио</a>
 
 	<header class="header">
 		<div class="container">
-			<nav class="header-nav">
-				<input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+			<nav class="header-nav" aria-label="Main navigation">
+				<input type="checkbox" id="navToggle" class="nav-toggle">
 				<a href="#" class="logo">Bean Scene</a>
-				<label for="navToggle" class="burger" aria-label="Toggle menu">
+				<label for="navToggle" class="burger" aria-label="Toggle menu" aria-controls="mainMenu" aria-expanded="false">
 					<span></span><span></span><span></span>
 				</label>
-				<ul class="nav-menu">
+				<ul class="nav-menu" id="mainMenu">
 					<li><a href="#">Home</a></li>
 					<li><a href="#products">Menu</a></li>
 					<li><a href="#advantages">About Us</a></li>
@@ -149,10 +149,10 @@
 			<h2 class="dark-heading">Our coffee perfection feedback</h2>
 			<p class="description">Our customers has amazing things to say about us</p>
 			<div class="slider-wrapper">
-				<div class="controls" role="tablist" aria-label="Testimonials">
-					<input type="radio" name="control1" id="control1" checked>
-					<input type="radio" name="control1" id="control2">
-					<input type="radio" name="control1" id="control3">
+				<div class="controls" role="group" aria-label="Testimonials">
+					<input type="radio" name="control1" id="control1" aria-label="Отзыв 1 из 3" checked>
+					<input type="radio" name="control1" id="control2" aria-label="Отзыв 2 из 3">
+					<input type="radio" name="control1" id="control3" aria-label="Отзыв 3 из 3">
 				</div>
 				<div class="slider">
 					<div class="slides">
@@ -201,10 +201,12 @@
 		<div class="container">
 			<h2>Subscribe to get the Latest News</h2>
 			<p>Don't miss out on our latest news, updates, tips and special offers</p>
-			<form action="#" method="post">
-				<input type="email" name="email" placeholder="Enter your mail" required autocomplete="email">
-				<input type="submit" value="Subscribe">
+			<form action="#" method="post" id="subscribeForm">
+				<label for="subscribeEmail" class="visually-hidden">Email</label>
+				<input type="email" id="subscribeEmail" name="email" placeholder="Enter your mail" required autocomplete="email">
+				<button type="submit">Subscribe</button>
 			</form>
+			<p class="subscribe-status" id="subscribeStatus" aria-live="polite"></p>
 		</div>
 		<img class="img-left" src="/bean-scene/img/pngwing 1.png" alt="" aria-hidden="true" loading="lazy">
 		<img class="img-right" src="/bean-scene/img/pngwing 2.png" alt="" aria-hidden="true" loading="lazy">
@@ -222,7 +224,7 @@
 					<a href="#" aria-label="Twitter"><img src="/bean-scene/img/Group 53.png" alt="" width="24" height="24"></a>
 				</div>
 			</div>
-			<nav class="footer-nav">
+			<nav class="footer-nav" aria-label="Footer navigation">
 				<ul>
 					<li>About</li>
 					<li><a href="#">Menu</a></li>
@@ -240,7 +242,7 @@
 				<ul>
 					<li>Contact Us</li>
 					<li><a href="#">Akshya Nagar 1st Block 1st Cross, Ram murthy nagar, Bangalore-560016</a></li>
-					<li><a href="tel:+12029182132">+1 202-918-2132</a></li>
+					<li><a href="tel:+12029182132">+1&nbsp;202&#8209;918&#8209;2132</a></li>
 					<li><a href="mailto:beanscene@mail.com">beanscene@mail.com</a></li>
 					<li><a href="https://www.beanscene.com">www.beanscene.com</a></li>
 				</ul>
@@ -248,5 +250,6 @@
 		</div>
 		<img class="background-image" src="/bean-scene/img/fotter_image.png" alt="" aria-hidden="true" loading="lazy">
 	</footer>
+	<script src="/bean-scene/js/app.js"></script>
 </body>
 </html>

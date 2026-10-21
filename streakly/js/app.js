@@ -116,8 +116,3 @@ if (gsap) {
 }
 
 await start('/');
-
-if ('serviceWorker' in navigator && location.protocol === 'https:') {
-	// optional offline shell — register when sw.js exists
-	navigator.serviceWorker.register('/streakly/sw.js').catch(() => {});
-}

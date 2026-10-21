@@ -53,21 +53,30 @@ export function renderTransactions({ root }) {
 						<div class="tx-item__meta">${cat?.name ?? '—'} · ${formatDisplayDate(tx.date)}</div>
 					</div>
 					<div class="tx-item__amount ${tx.type}">${tx.type === 'income' ? '+' : '−'}${formatMoneyShort(tx.amount)}</div>
+					<button type="button" class="tx-item__delete" aria-label="Удалить операцию ${escapeHtml(tx.title)}">×</button>
 				`;
-				row.addEventListener('contextmenu', (e) => {
-					e.preventDefault();
+				const removeTransaction = () => {
 					if (confirm('Удалить операцию?')) {
 						deleteTransaction(tx.id);
 						toast('Удалено', 'success');
 					}
+				};
+				row.addEventListener('contextmenu', (e) => {
+					e.preventDefault();
+					removeTransaction();
 				});
+				row.querySelector('.tx-item__delete').addEventListener('click', removeTransaction);
 				list.appendChild(row);
 			});
 		}
 
 		root.querySelector('#txSearch').addEventListener('input', (e) => {
 			search = e.target.value;
+			const cursor = e.target.selectionStart;
 			mount();
+			const nextSearch = root.querySelector('#txSearch');
+			nextSearch.focus();
+			nextSearch.setSelectionRange(cursor, cursor);
 		});
 
 		root.querySelector('#typeFilters').addEventListener('click', (e) => {

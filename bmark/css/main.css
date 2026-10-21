@@ -30,6 +30,18 @@ body {
 	background: var(--color-white);
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -169,6 +181,10 @@ input {
 	color: var(--color-muted);
 	padding-bottom: 8px;
 	font-weight: 500;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	cursor: pointer;
 }
 
 .search-tabs .tab.active {
@@ -219,6 +235,13 @@ input {
 	flex-shrink: 0;
 }
 
+.search-status {
+	min-height: 22px;
+	margin-top: 12px;
+	color: var(--color-grey);
+	font-size: 14px;
+}
+
 .header-hero-img {
 	width: 100%;
 	max-width: 100%;
@@ -250,6 +273,9 @@ input {
 	align-items: center;
 	gap: 12px;
 	flex-wrap: wrap;
+	border: 0;
+	padding: 0;
+	min-width: 0;
 }
 
 .controls label {
@@ -298,6 +324,10 @@ input {
 	border-radius: 40px;
 	padding-bottom: 24px;
 	transition: box-shadow 0.35s ease;
+}
+
+.card[hidden] {
+	display: none;
 }
 
 .card img {

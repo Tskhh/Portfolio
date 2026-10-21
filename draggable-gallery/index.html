@@ -20,18 +20,15 @@
 	(function () {
 		const mobile = window.matchMedia('(max-width: 1024px)').matches ||
 			window.matchMedia('(hover: none) and (pointer: coarse)').matches
-		if (!mobile) {
-			['libs/gsap.min.js', 'libs/Draggable.min.js', 'libs/InertiaPlugin.min.js'].forEach((src) => {
-				const s = document.createElement('script')
-				s.src = src
-				s.defer = true
-				document.head.appendChild(s)
-			})
-		}
-		const app = document.createElement('script')
-		app.src = 'js/app.js'
-		app.defer = true
-		document.head.appendChild(app)
+		const scripts = mobile
+			? ['js/app.js']
+			: ['libs/gsap.min.js', 'libs/Draggable.min.js', 'libs/InertiaPlugin.min.js', 'js/app.js']
+		scripts.forEach((src) => {
+			const script = document.createElement('script')
+			script.src = src
+			script.async = false
+			document.head.appendChild(script)
+		})
 	})()
 	</script>
 	<style>
@@ -40,7 +37,7 @@
 </head>
 <body>
 
-	<a href="/portfolio.html" class="project-back">К портфолио</a>
+	<a href="/portfolio" class="project-back">К портфолио</a>
 
    <h1 class="header">Архитектура <span>Загрузка...</span></h1>
 

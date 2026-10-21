@@ -9,6 +9,7 @@
 }
 body {
     background-color: #141414;
+    overflow-x: hidden;
 }
 .wrapper {
     display: flex;
@@ -23,6 +24,7 @@ body {
     
 }
 .item {
+    position: relative;
     width: calc(var(--index) * 3);
     height: calc(var(--index) * 12);;
     background-color: #222;
@@ -95,30 +97,31 @@ body {
     transform: translateZ(calc(var(--index)* .6)) rotateY(-14deg);
     
 }
-.items .item:active, .items .item:focus {
-    width: 28vw;
-    filter: inherit;
-    z-index: 100;
-    transform: translateZ(calc(var(--index) * 10));
-    margin: 0 .45vw;
+@media (hover: hover) and (pointer: fine) {
+    .items .item:active,
+    .items .item:focus {
+        width: 28vw;
+        filter: inherit;
+        z-index: 100;
+        transform: translateZ(calc(var(--index) * 10));
+        margin: 0 .45vw;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	body {
 		overflow-x: hidden;
 	}
 
 	.wrapper {
+		height: auto;
 		overflow-x: hidden;
 		min-height: 100vh;
-		padding-top: 48px;
+		padding: 80px 12px 24px;
 	}
-        height: auto;
-        min-height: 100vh;
-        padding: 80px 12px 24px;
-    }
 
     .items {
+        width: 100%;
         flex-wrap: wrap;
         justify-content: center;
         perspective: none;
@@ -137,5 +140,16 @@ body {
     .items .item:has(+ :hover) {
         transform: none;
         filter: none;
+    }
+
+    .item:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .item {
+        transition: none;
     }
 }

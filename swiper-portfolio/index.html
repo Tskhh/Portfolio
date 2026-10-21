@@ -35,7 +35,7 @@
 </head>
 <body>
 
-	<a href="/portfolio.html" class="project-back">К портфолио</a>
+	<a href="/portfolio" class="project-back">К портфолио</a>
 
 
 
@@ -209,6 +209,11 @@
 
 
 
-	
+	<script>
+		document.querySelectorAll('.slider_img').forEach((image, index) => {
+			image.setAttribute('role', 'img')
+			image.setAttribute('aria-label', `Фотография из галереи ${index + 1}`)
+		})
+	</script>
 </body>
 </html>

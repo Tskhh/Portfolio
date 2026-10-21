@@ -101,7 +101,7 @@ body {
 	will-change: transform;
 	z-index: -1;
 	border: 6.5px solid rgba(255 255 255 / .3);
-	border-image: linear-gradient(to right, #a830d5 0% #3a4ed5 100%) 1;
+	border-image: linear-gradient(to right, #a830d5 0%, #3a4ed5 100%) 1;
 	overflow: hidden;
 }
 .cursor_image {
@@ -134,7 +134,17 @@ body {
 	opacity: .1;
 }
 
-@media (max-width: 768px) {
+.magic-list_item.is-active .item-bg,
+.magic-list_item:focus-visible .item-bg {
+	opacity: .15;
+}
+
+.magic-list_item:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: -4px;
+}
+
+@media (max-width: 1024px) {
 	body {
 		cursor: auto;
 	}

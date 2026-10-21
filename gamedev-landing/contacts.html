@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Связаться с учебной игровой студией NovaPlay.">
 	<title>Контакты — NovaPlay</title>
 	<link rel="icon" href="/favicon.ico" sizes="32x32">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -16,15 +17,16 @@
 	<script src="/js/project-lite.js"></script>
 </head>
 <body class="gamedev-mobile">
-	<a href="/portfolio.html" class="project-back">К портфолио</a>
+	<a href="/portfolio" class="project-back">К портфолио</a>
+	<div class="wrapper">
 	<header class="container">
-		<a href="index.html" class="logo">NovaPlay</a>
+		<a href="/gamedev-landing" class="logo">NovaPlay</a>
 		<nav aria-label="Навигация">
 			<ul>
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="about.html">О студии</a></li>
-				<li><a href="/portfolio.html">Портфолио</a></li>
-				<li class="btn active"><a href="contacts.html">Контакты</a></li>
+				<li><a href="/gamedev-landing">Главная</a></li>
+				<li><a href="/gamedev-landing/about">О студии</a></li>
+				<li><a href="/portfolio">Портфолио</a></li>
+				<li class="btn active"><a href="/gamedev-landing/contacts">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -34,6 +36,7 @@
 		<p>Оставьте заявку — мы свяжемся с вами в ближайшее время.</p>
 		<img src="imag/wrld.png" alt="Глобус" loading="lazy" decoding="async" width="320">
 	</section>
+	</div>
 
 	<section class="feedback">
 		<div class="container">
@@ -89,9 +92,10 @@
 				return
 			}
 
-			if (!email.includes('@') || !email.includes('.')) {
+			if (!e.currentTarget.checkValidity()) {
 				status.textContent = 'Введите корректный email.'
 				status.classList.add('email-status--error')
+				e.currentTarget.reportValidity()
 				return
 			}
 

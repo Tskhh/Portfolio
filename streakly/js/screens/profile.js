@@ -1,5 +1,6 @@
 import { getProfile, updateProfile, resetAll, exportData, importData, getGlobalStats, subscribe } from '../store.js';
 import { toast } from '../ui/toast.js';
+import { escapeHtml } from '../utils/dom.js';
 
 export function renderProfile({ root }) {
 	let unsub = subscribe(() => mount());
@@ -15,8 +16,8 @@ export function renderProfile({ root }) {
 			<p class="page-subtitle" style="margin-bottom:20px">Настройки и данные</p>
 
 			<div class="glass-card profile-hero">
-				<div class="profile-avatar">${profile.name?.charAt(0)?.toUpperCase() ?? 'S'}</div>
-				<h2 style="font-size:20px;margin-bottom:4px">${profile.name ?? 'Пользователь'}</h2>
+				<div class="profile-avatar">${escapeHtml(profile.name?.charAt(0)?.toUpperCase() ?? 'S')}</div>
+				<h2 style="font-size:20px;margin-bottom:4px">${escapeHtml(profile.name ?? 'Пользователь')}</h2>
 				<p style="font-size:13px;color:var(--text-secondary)">С нами с ${joined}</p>
 				<div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
 					<span class="streak-badge">🔥 ${stats.bestStreak} лучший streak</span>
@@ -26,7 +27,7 @@ export function renderProfile({ root }) {
 
 			<div class="field">
 				<label for="profileName">Имя</label>
-				<input id="profileName" value="${profile.name ?? ''}" maxlength="32" placeholder="Ваше имя">
+				<input id="profileName" value="${escapeHtml(profile.name ?? '')}" maxlength="32" placeholder="Ваше имя">
 			</div>
 
 			<div class="profile-menu glass-card" style="margin-top:8px">
@@ -51,6 +52,7 @@ export function renderProfile({ root }) {
 			a.href = URL.createObjectURL(blob);
 			a.download = 'streakly-backup.json';
 			a.click();
+			URL.revokeObjectURL(a.href);
 			toast('Файл скачан', 'success');
 		});
 

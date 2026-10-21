@@ -26,7 +26,7 @@ export function navigate(path, replace = false) {
 
 export async function start(defaultRoute = '/') {
 	window.addEventListener('hashchange', render);
-	await render(defaultRoute);
+	await render(location.hash.slice(1) || defaultRoute);
 }
 
 async function render(forcedPath) {
